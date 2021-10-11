@@ -41,7 +41,7 @@ module.exports = {
 	      baseUrl: `https://dev-pa-cms.pantheonsite.io`,
 	    // fastBuilds: true, // has issue with Drupal API key
 	      params: {
-	        pi-key`: process.env.API_KEY,
+	        `api-key`: process.env.API_KEY,
 	      },
        },
     },
