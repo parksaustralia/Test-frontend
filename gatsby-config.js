@@ -34,15 +34,14 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-gatsby-cloud`, 
     {
       resolve: `gatsby-source-drupal`,
       options: {
-	      baseUrl: `https://dev-pa-cms.pantheonsite.io`,
-	    // fastBuilds: true, // has issue with Drupal API key
-	      params: {
-	        `api-key`: process.env.API_KEY,
-	      },
+	 baseUrl: `https://dev-pa-cms.pantheonsite.io`,
+	 // fastBuilds: true, // has issue with Drupal API key
+	 params: {
+	    `api-key`: process.env.API_KEY,
+	 },
        },
     },
   ],
