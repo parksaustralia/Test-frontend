@@ -42,7 +42,7 @@ module.exports = {
        params: {
          "api-key": process.env.API_KEY,
        },
-       fastBuilds: true,
+       // fastBuilds: true,
      },
    },    
   ],
