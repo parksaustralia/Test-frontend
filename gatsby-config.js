@@ -44,7 +44,7 @@ module.exports = {
        },
        filters: {
           // collection : filter
-          `node/page`: "filter[field_site.meta.drupal_internal__target_id][value]=knp",
+          `node/page`: "filter[field_site.meta.drupal_internal__target_id]=knp",
        },
      },
    },    
