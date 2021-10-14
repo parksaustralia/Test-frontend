@@ -37,10 +37,14 @@ module.exports = {
    {
      resolve: `gatsby-source-drupal`,
      options: {
-       baseUrl: `https://dev-pa-cms.pantheonsite.io`,
+       baseUrl: `https://dev-pa-cms.pantheonsite.io/`,
        // fastBuilds: true, // has issue with Drupal API key
        params: {
          "api-key": process.env.API_KEY,
+       },
+       filters: {
+          // collection : filter
+          `node/page`: "filter[field_site.meta.drupal_internal__target_id][value]=knp",
        },
      },
    },    
