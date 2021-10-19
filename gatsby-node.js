@@ -2,26 +2,37 @@ const path = require("path");
 
 const park = process.env.PARK;
 
+// graphql function doesn't throw an error so we have to check to check for the result.errors to throw manually
+const wrapper = (promise) =>
+  promise.then((result) => {
+    if (result.errors) {
+      throw result.errors
+    }
+    return result
+  })
+
 async function createAllPages(createPage, pageTemplate, graphql) {  
-  const result = await graphql(
-    `
-      query {
-        pages: allNodePage(
-          filter: {
-            path: { alias: { ne: null } }
-          }
-        ) {
-          edges {
-            node {
-              path {
-                alias
+  const result = await wrapper(
+    graphql(
+      `
+        query {
+          pages: allNodePage(
+            filter: {
+              path: { alias: { ne: null } }
+            }
+          ) {
+            edges {
+              node {
+                path {
+                  alias
+                }
               }
             }
           }
         }
-      }
-    `,
-    { park }
+      `,
+      { park }
+    )
   );    
 
   result.data.pages.edges.forEach(({ node }) => {
