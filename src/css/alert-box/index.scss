@@ -1,0 +1,54 @@
+/**
+ * Alert box
+ */
+
+.alert-box {
+  background-color: #fff8e0;
+  color: #8b6633;
+  padding: 3rem 3rem 3rem 6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.alert-box:before {
+  content: "";
+  background-image: url("./alert-box/info.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 3.5rem;
+  left: 2.8rem;
+}
+@include media("<tablet") {
+  .alert-box:before {
+    top: 3.3rem;
+  }
+}
+.alert-box h1,
+.copy .alert-box h1,
+.alert-box h2,
+.copy .alert-box h2,
+.alert-box h3,
+.copy .alert-box h3 {
+  color: #8b6633;
+  font-family: var(--font-base);
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+.alert-box p,
+.copy .alert-box p,
+.alert-box ol,
+.alert-box ul {
+  color: #8b6633;
+  font-family: var(--font-base);
+  font-size: 1.6rem;
+}
+.alert-box__quiet:before {
+  background-image: none;
+}
+.alert-box p:last-child {
+  padding-bottom: 0 !important;
+}

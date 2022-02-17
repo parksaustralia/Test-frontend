@@ -1,0 +1,94 @@
+/**
+ * Table
+ */
+
+.table-wrapper {
+  margin-bottom: 4rem;
+  position: relative;
+}
+.breakpoint-tablet .table-wrapper:before,
+.breakpoint-phone .table-wrapper:before {
+  background-image: linear-gradient(
+    to left,
+    rgba(230, 230, 230, 1),
+    rgba(230, 230, 230, 0)
+  );
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  width: 3rem;
+}
+.breakpoint-tablet .table-wrapper:after,
+.breakpoint-phone .table-wrapper:after {
+  content: "↓ Swipe to see more";
+  color: $text-color-light;
+  display: block;
+  font-weight: 700;
+  text-align: center;
+  transform: rotate(-90deg);
+  margin-top: -1rem;
+  position: absolute;
+  top: 11rem;
+  right: -6.8rem;
+  width: 12rem;
+}
+.breakpoint-tablet .table-wrapper__inner,
+.breakpoint-phone .table-wrapper__inner {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+table {
+  width: 100%;
+}
+thead {
+  border-bottom: 1px solid $keyline-color;
+}
+thead th {
+  color: $text-color-light;
+  font-weight: 700;
+  padding: 1.4rem 1rem;
+  vertical-align: middle;
+}
+th:first-child {
+  padding-left: 0;
+}
+th:last-child {
+  padding-right: 0;
+}
+th.align-right,
+td.align-right {
+  text-align: right;
+}
+th.align-center,
+td.align-center {
+  text-align: center;
+}
+.breakpoint-tablet th:last-child,
+.breakpoint-tablet th:last-child,
+.breakpoint-phone td:last-child,
+.breakpoint-phone td:last-child {
+  padding-right: 4rem;
+}
+tbody tr {
+  border-bottom: 1px solid lighten($keyline-color, 10%);
+}
+tbody th {
+  color: $text-color-lightest;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding-top: 3rem;
+  padding-bottom: 1.6rem;
+  text-transform: uppercase;
+}
+td {
+  padding: 1.4rem 1rem;
+  vertical-align: middle;
+}
+td:first-child {
+  padding-left: 0;
+}
+td:last-child {
+  padding-right: 0;
+}

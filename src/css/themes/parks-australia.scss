@@ -1,0 +1,57 @@
+/**
+ * Parks Australia theme variables
+ */
+
+/* Named colours */
+$black: #000;
+$white: #fff;
+$gray: #333;
+$dark-gray: #1b1c1b;
+$plum: #71273d;
+$plum-darker: #580e24;
+$sand: #d3c89d;
+$sand-darker: #c8bb89;
+
+/* Colours */
+$primary-color: $plum;
+$primary-color-darker: $plum-darker;
+$secondary-color: $sand;
+$secondary-color-darker: $sand-darker;
+$tertiary-color: $dark-gray;
+$tertiary-color-darker: $black;
+$keyline-color: #d4d4d4;
+$text-color: $gray;
+$text-color-light: #4a4a4a;
+$text-color-lighter: #666;
+$text-color-lightest: #999;
+
+/* Components */
+$footer-logos-bg-color: $primary-color;
+$footer-nav-bg-color: $tertiary-color;
+$footer-park-logos-bg-color: $tertiary-color-darker;
+$icon-color: $primary-color;
+$subscribe-icon-color: $tertiary-color;
+$button-bg-color: $primary-color;
+$button-color: $white;
+$button-bg-color-hover: $primary-color-darker;
+$button-color-hover: $white;
+$button-alternate-bg-color: $secondary-color;
+$button-alternate-bg-color-hover: $secondary-color-darker;
+$button-alternate-color: $white;
+$button-alternate-color-hover: $white;
+$h1-color: $gray;
+$h2-color: $secondary-color-darker;
+$h3-color: $primary-color;
+$blockquote-border-color: #417630;
+$highlight-paragraph-color: $text-color-lightest;
+$footer-nav-heading-color: $white;
+
+/* Typography */
+$font-base: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-base-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading-weight: 700;
+$font-intro-paragraph-weight: 400;

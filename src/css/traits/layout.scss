@@ -1,0 +1,552 @@
+$spacingXSmall: 1rem;
+$spacingSmall: 2rem;
+$spacingMedium: 3rem;
+$spacingLarge: 4rem;
+$spacingXLarge: 6rem;
+
+/**
+ * Margin
+ */
+
+.flush {
+  padding: 0;
+  margin: 0;
+}
+
+.m-xsmall {
+  margin: $spacingXSmall;
+}
+
+.m-small {
+  margin: $spacingSmall;
+}
+
+.m-medium {
+  margin: $spacingMedium;
+}
+
+.m-large {
+  margin: $spacingLarge;
+}
+.breakpoint-tablet .m-large,
+.breakpoint-phone .m-large {
+  margin: $spacingMedium;
+}
+
+.m-xlarge {
+  margin: $spacingXLarge;
+}
+.breakpoint-tablet .m-xlarge,
+.breakpoint-phone .m-xlarge {
+  margin: $spacingMedium;
+}
+
+.mt-flush {
+  margin-top: 0;
+}
+
+.mt-xsmall {
+  margin-top: $spacingXSmall;
+}
+
+.mt-small {
+  margin-top: $spacingSmall;
+}
+
+.mt-medium {
+  margin-top: $spacingMedium;
+}
+
+.mt-large {
+  margin-top: $spacingLarge;
+}
+.breakpoint-tablet .mt-large,
+.breakpoint-phone .mt-large {
+  margin-top: $spacingMedium;
+}
+
+.mt-xlarge {
+  margin-top: $spacingXLarge;
+}
+.breakpoint-tablet .mt-xlarge,
+.breakpoint-phone .mt-xlarge {
+  margin-top: $spacingMedium;
+}
+
+.mr-flush {
+  margin-right: 0;
+}
+
+.mr-xsmall {
+  margin-right: $spacingXSmall;
+}
+
+.mr-small {
+  margin-right: $spacingSmall;
+}
+
+.mr-medium {
+  margin-right: $spacingMedium;
+}
+
+.mr-large {
+  margin-right: $spacingLarge;
+}
+.breakpoint-tablet .mr-large,
+.breakpoint-phone .mr-large {
+  margin-right: $spacingMedium;
+}
+
+.mr-xlarge {
+  margin-right: $spacingXLarge;
+}
+.breakpoint-tablet .mr-xlarge,
+.breakpoint-phone .mr-xlarge {
+  margin-right: $spacingMedium;
+}
+
+.mb-flush {
+  margin-bottom: 0;
+}
+
+.mb-xsmall {
+  margin-bottom: $spacingXSmall;
+}
+
+.mb-small {
+  margin-bottom: $spacingSmall;
+}
+
+.mb-medium {
+  margin-bottom: $spacingMedium;
+}
+
+.mb-large {
+  margin-bottom: $spacingLarge;
+}
+.breakpoint-tablet .mb-large,
+.breakpoint-phone .mb-large {
+  margin-bottom: $spacingMedium;
+}
+
+.mb-xlarge {
+  margin-bottom: $spacingXLarge;
+}
+.breakpoint-tablet .mb-xlarge,
+.breakpoint-phone .mb-xlarge {
+  margin-bottom: $spacingMedium;
+}
+
+.ml-flush {
+  margin-left: 0;
+}
+
+.ml-xsmall {
+  margin-left: $spacingXSmall;
+}
+
+.ml-small {
+  margin-left: $spacingSmall;
+}
+
+.ml-medium {
+  margin-left: $spacingMedium;
+}
+
+.ml-large {
+  margin-left: $spacingLarge;
+}
+.breakpoint-tablet .ml-large,
+.breakpoint-phone .ml-large {
+  margin-left: $spacingMedium;
+}
+
+.ml-xlarge {
+  margin-left: $spacingXLarge;
+}
+.breakpoint-tablet .ml-xlarge,
+.breakpoint-phone .ml-xlarge {
+  margin-left: $spacingMedium;
+}
+
+.my-flush {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.my-xsmall {
+  margin-top: $spacingXSmall;
+  margin-bottom: $spacingXSmall;
+}
+
+.my-small {
+  margin-top: $spacingSmall;
+  margin-bottom: $spacingSmall;
+}
+
+.my-medium {
+  margin-top: $spacingMedium;
+  margin-bottom: $spacingMedium;
+}
+
+.my-large {
+  margin-top: $spacingLarge;
+  margin-bottom: $spacingLarge;
+}
+.breakpoint-tablet .my-large,
+.breakpoint-phone .my-large {
+  margin-top: $spacingMedium;
+  margin-bottom: $spacingMedium;
+}
+
+.my-xlarge {
+  margin-top: $spacingXLarge;
+  margin-bottom: $spacingXLarge;
+}
+.breakpoint-tablet .my-xlarge,
+.breakpoint-phone .my-xlarge {
+  margin-top: $spacingMedium;
+  margin-bottom: $spacingMedium;
+}
+
+.mx-xsmall {
+  margin-right: $spacingXSmall;
+  margin-left: $spacingXSmall;
+}
+
+.mx-flush {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.mx-small {
+  margin-right: $spacingSmall;
+  margin-left: $spacingSmall;
+}
+
+.mx-medium {
+  margin-right: $spacingMedium;
+  margin-left: $spacingMedium;
+}
+
+.mx-large {
+  margin-right: $spacingLarge;
+  margin-left: $spacingLarge;
+}
+.breakpoint-tablet .mx-large,
+.breakpoint-phone .mx-large {
+  margin-right: $spacingMedium;
+  margin-left: $spacingMedium;
+}
+
+.mx-xlarge {
+  margin-right: $spacingXLarge;
+  margin-left: $spacingXLarge;
+}
+.breakpoint-tablet .mx-xlarge,
+.breakpoint-phone .mx-xlarge {
+  margin-right: $spacingMedium;
+  margin-left: $spacingMedium;
+}
+
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/**
+ * Padding
+ */
+
+.p-xsmall {
+  padding: $spacingXSmall;
+}
+
+.p-small {
+  padding: $spacingSmall;
+}
+
+.p-medium {
+  padding: $spacingMedium;
+}
+
+.p-large {
+  padding: $spacingLarge;
+}
+.breakpoint-tablet .p-large,
+.breakpoint-phone .p-large {
+  padding: $spacingMedium;
+}
+
+.p-xlarge {
+  padding: $spacingXLarge;
+}
+.breakpoint-tablet .p-xlarge,
+.breakpoint-phone .p-xlarge {
+  padding: $spacingMedium;
+}
+
+.pt-xsmall {
+  padding-top: $spacingXSmall;
+}
+
+.pt-flush {
+  padding-top: 0;
+}
+
+.pt-small {
+  padding-top: $spacingSmall;
+}
+
+.pt-medium {
+  padding-top: $spacingMedium;
+}
+
+.pt-large {
+  padding-top: $spacingLarge;
+}
+.breakpoint-tablet .pt-large,
+.breakpoint-phone .pt-large {
+  padding-top: $spacingMedium;
+}
+
+.pt-xlarge {
+  padding-top: $spacingXLarge;
+}
+.breakpoint-tablet .pt-xlarge,
+.breakpoint-phone .pt-xlarge {
+  padding-top: $spacingMedium;
+}
+
+.pr-flush {
+  padding-right: 0;
+}
+
+.pr-xsmall {
+  padding-right: $spacingXSmall;
+}
+
+.pr-small {
+  padding-right: $spacingSmall;
+}
+
+.pr-medium {
+  padding-right: $spacingMedium;
+}
+
+.pr-large {
+  padding-right: $spacingLarge;
+}
+.breakpoint-tablet .pr-large,
+.breakpoint-phone .pr-large {
+  padding-right: $spacingMedium;
+}
+
+.pr-xlarge {
+  padding-right: $spacingXLarge;
+}
+.breakpoint-tablet .pr-xlarge,
+.breakpoint-phone .pr-xlarge {
+  padding-right: $spacingMedium;
+}
+
+.pb-flush {
+  padding-bottom: 0;
+}
+
+.pb-xsmall {
+  padding-bottom: $spacingXSmall;
+}
+
+.pb-small {
+  padding-bottom: $spacingSmall;
+}
+
+.pb-medium {
+  padding-bottom: $spacingMedium;
+}
+
+.pb-large {
+  padding-bottom: $spacingLarge;
+}
+.breakpoint-tablet .pb-large,
+.breakpoint-phone .pb-large {
+  padding-bottom: $spacingMedium;
+}
+
+.pb-xlarge {
+  padding-bottom: $spacingXLarge;
+}
+.breakpoint-tablet .pb-xlarge,
+.breakpoint-phone .pb-xlarge {
+  padding-bottom: $spacingMedium;
+}
+
+.pl-flush {
+  padding-left: 0;
+}
+
+.pl-xsmall {
+  padding-left: $spacingXSmall;
+}
+
+.pl-small {
+  padding-left: $spacingSmall;
+}
+
+.pl-medium {
+  padding-left: $spacingMedium;
+}
+
+.pl-large {
+  padding-left: $spacingLarge;
+}
+.breakpoint-tablet .pl-large,
+.breakpoint-phone .pl-large {
+  padding-left: $spacingMedium;
+}
+
+.pl-xlarge {
+  padding-left: $spacingXLarge;
+}
+.breakpoint-tablet .pl-xlarge,
+.breakpoint-phone .pl-xlarge {
+  padding-left: $spacingMedium;
+}
+
+.py-flush {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.py-xsmall {
+  padding-top: $spacingXSmall;
+  padding-bottom: $spacingXSmall;
+}
+
+.py-small {
+  padding-top: $spacingSmall;
+  padding-bottom: $spacingSmall;
+}
+
+.py-medium {
+  padding-top: $spacingMedium;
+  padding-bottom: $spacingMedium;
+}
+
+.py-large {
+  padding-top: $spacingLarge;
+  padding-bottom: $spacingLarge;
+}
+.breakpoint-tablet .py-large,
+.breakpoint-phone .py-large {
+  padding-top: $spacingMedium;
+  padding-bottom: $spacingMedium;
+}
+
+.py-xlarge {
+  padding-top: $spacingXLarge;
+  padding-bottom: $spacingXLarge;
+}
+.breakpoint-tablet .py-xlarge,
+.breakpoint-phone .py-xlarge {
+  padding-top: $spacingMedium;
+  padding-bottom: $spacingMedium;
+}
+
+.px-flush {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.px-xsmall {
+  padding-right: $spacingXSmall;
+  padding-left: $spacingXSmall;
+}
+
+.px-small {
+  padding-right: $spacingSmall;
+  padding-left: $spacingSmall;
+}
+
+.px-medium {
+  padding-right: $spacingMedium;
+  padding-left: $spacingMedium;
+}
+
+.px-large {
+  padding-right: $spacingLarge;
+  padding-left: $spacingLarge;
+}
+.breakpoint-tablet .px-large,
+.breakpoint-phone .px-large {
+  padding-right: $spacingMedium;
+  padding-left: $spacingMedium;
+}
+
+.px-xlarge {
+  padding-right: $spacingXLarge;
+  padding-left: $spacingXLarge;
+}
+.breakpoint-tablet .px-xlarge,
+.breakpoint-phone .px-xlarge {
+  padding-right: $spacingMedium;
+  padding-left: $spacingMedium;
+}
+
+/**
+ * Text
+ */
+
+.t-left {
+  text-align: left;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-right {
+  text-align: right;
+}
+
+/**
+* Flex alignment
+*/
+
+.d-flex {
+  display: flex;
+}
+
+.flex-items-center {
+  align-items: center;
+}
+
+.flex-center {
+  align-self: center;
+}
+
+.flex-left {
+  margin-right: auto;
+}
+
+.flex-right {
+  margin-left: auto;
+}
+
+.flex-space {
+  justify-content: space-between;
+}
+
+/**
+* Clearfix
+*/
+
+.clearfix:after {
+  display: block;
+  height: 0;
+  clear: both;
+  font-size: 0;
+  visibility: hidden;
+  content: " ";
+}

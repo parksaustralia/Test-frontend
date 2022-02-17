@@ -1,0 +1,70 @@
+/**
+ * Page meta
+ */
+
+.page-meta {
+}
+.page-meta__tags {
+  float: left;
+  width: 70%;
+}
+.breakpoint-tablet .page-meta__tags,
+  .breakpoint-phone .page-meta__tags {
+  float: none;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+.page-meta__heading {
+  padding-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $text-color-light;
+}
+.page-meta__tag-list {
+}
+.page-meta__tag {
+  display: inline-block;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+.breakpoint-tablet .page-meta__tag,
+      .breakpoint-phone .page-meta__tag {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.page-meta__tag a {
+  display: block;
+  padding: 1.2rem 2rem;
+  font-size: 1.6rem;
+  color: $text-color-light;
+  text-decoration: none;
+  border: 1px solid $keyline-color;
+  border-radius: 2px;
+  transition: border-color 150ms ease-in-out,
+  color 150ms ease-in-out;
+}
+.breakpoint-tablet .page-meta__tag a,
+        .breakpoint-phone .page-meta__tag a {
+  padding: 1rem 1.6rem;
+  font-size: 1.4rem;
+}
+.page-meta__tag a:hover,
+        .page-meta__tag a:focus {
+  color: $primary-color;
+  border-color: $primary-color;
+}
+.page-meta__share {
+  float: left;
+  width: 30%;
+}
+.breakpoint-tablet .page-meta__share,
+  .breakpoint-phone .page-meta__share {
+  float: none;
+  width: 100%;
+}
+.page-meta__share-links {
+}
+.page-meta__share-link {
+  display: inline-block;
+  padding-right: 1rem;
+}

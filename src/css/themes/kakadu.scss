@@ -1,0 +1,45 @@
+/**
+ * Kakadu theme variables
+ */
+
+/* Colours */
+$primary-color: #b5331f;
+$primary-color-darker: #a22714;
+$secondary-color: #e68000;
+$secondary-color-darker: #cf7300;
+$keyline-color: #d4d4d4;
+$text-color: #333;
+$text-color-light: #4a4a4a;
+$text-color-lighter: #666;
+$text-color-lightest: #999;
+
+/* Components */
+$footer-logos-bg-color: $primary-color;
+$footer-nav-bg-color: #1b1c1b;
+$footer-park-logos-bg-color: #000;
+$icon-color: $primary-color;
+$subscribe-icon-color: #333;
+$button-bg-color: $secondary-color;
+$button-color: #fff;
+$button-bg-color-hover: $secondary-color-darker;
+$button-color-hover: #fff;
+$button-alternate-bg-color: $primary-color;
+$button-alternate-bg-color-hover: $primary-color-darker;
+$button-alternate-color: #fff;
+$button-alternate-color-hover: #fff;
+$h1-color: $primary-color;
+$h2-color: $primary-color;
+$h3-color: $text-color;
+$blockquote-border-color: $primary-color;
+$highlight-paragraph-color: $secondary-color;
+$footer-nav-heading-color: $secondary-color;
+
+/* Typography */
+$font-base: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-base-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body: "Lusitana", "Hoefler Text", Georgia, serif;
+$font-body-fallback: "Hoefler Text", Georgia, serif;
+$font-heading: "Quicksand", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading-weight: 700;
+$font-intro-paragraph-weight: 500;

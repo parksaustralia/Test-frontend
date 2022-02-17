@@ -1,0 +1,200 @@
+/**
+ * Masthead
+ */
+
+.masthead {
+  position: relative;
+  z-index: 10;
+  padding-left: 4rem;
+  border-top: 3px solid $primary-color;
+  border-bottom: 1px solid $keyline-color;
+  box-shadow: 0 2px 6px 0 rgba(80, 80, 80, 0.1);
+}
+.breakpoint-tablet-wide .masthead,
+.breakpoint-tablet .masthead,
+.breakpoint-phone .masthead {
+  padding-left: 2rem;
+}
+.masthead__inner {
+  display: flex;
+  max-width: 165rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.masthead__logo {
+  display: flex;
+  float: left;
+  margin-right: 3rem;
+}
+.masthead__logo-anchor {
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  align-self: center;
+}
+.masthead__logo-anchor--kakadu {
+  width: 107px;
+  height: 40px;
+  background-image: url("./masthead/logo-kakadu.svg");
+}
+.breakpoint-phone .masthead__logo-anchor--kakadu {
+  width: 85px;
+  height: 32px;
+}
+.masthead__logo-anchor--uluru {
+  padding: 1px;
+  width: 48px;
+  height: 48px;
+  background-image: url("./masthead/logo-uluru.svg");
+}
+.breakpoint-phone .masthead__logo-anchor--uluru {
+  width: 35px;
+  height: 35px;
+}
+.masthead__logo-anchor--booderee {
+  width: 161px;
+  height: 50px;
+  background-image: url("./masthead/logo-booderee.png");
+}
+.breakpoint-phone .masthead__logo-anchor--booderee {
+  width: 113px;
+  height: 35px;
+}
+.masthead__logo-anchor--botanic-gardens {
+  width: 203px;
+  height: 30px;
+  background-image: url("./masthead/logo-botanic-gardens.svg");
+}
+.breakpoint-phone .masthead__logo-anchor--botanic-gardens {
+  width: 160px;
+  height: 27px;
+}
+.masthead__logo-anchor--christmas-island {
+  padding: 1px;
+  width: 48px;
+  height: 48px;
+  background-image: url("./masthead/logo-christmas-island.svg");
+}
+.breakpoint-phone .masthead__logo-anchor--christmas-island {
+  width: 35px;
+  height: 35px;
+}
+.masthead__logo-anchor--norfolk-island {
+  padding: 1px;
+  width: 48px;
+  height: 48px;
+  background-image: url("./masthead/logo-norfolk-island.svg");
+}
+.breakpoint-phone .masthead__logo-anchor--norfolk-island {
+  width: 35px;
+  height: 35px;
+}
+.masthead__logo-anchor--marine-parks {
+  width: 151px;
+  height: 50px;
+  background-image: url("./masthead/logo-marine-parks.svg");
+}
+.breakpoint-phone .masthead__logo-anchor--marine-parks {
+  width: 106px;
+  height: 35px;
+}
+.masthead__logo-anchor--parks-australia {
+  width: 178px;
+  height: 43px;
+  background-image: url("./masthead/logo-parks-australia.svg");
+}
+.breakpoint-phone .masthead__logo-anchor--parks-australia {
+  width: 106px;
+  height: 35px;
+}
+.masthead__push-right {
+  border-left: 1px solid $keyline-color;
+  display: flex;
+  margin-left: auto;
+}
+.breakpoint-w-1080 .masthead__push-right {
+  border-left: none;
+  margin-left: 0;
+}
+.masthead__tab {
+  position: relative;
+  display: flex;
+  float: left;
+  border-right: 1px solid $keyline-color;
+}
+.breakpoint-w-1080 .masthead__tab {
+  display: none;
+}
+.masthead__tab-button {
+  display: block;
+  padding-right: 3.6rem;
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: background-color 150ms ease-in-out;
+}
+.masthead__tab-button:hover,
+.masthead__tab-button:focus {
+  background-color: #eee;
+}
+.masthead__tab-button span {
+  position: relative;
+}
+.masthead__tab-button span:after {
+  position: absolute;
+  top: 0.5rem;
+  right: -1.8rem;
+  display: block;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 5px solid $keyline-color;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+.masthead__tab:hover span:after,
+.masthead__tab:focus span:after,
+.masthead__tab-button:hover span:after,
+.masthead__tab-button:focus span:after {
+  border-top-color: $primary-color;
+}
+.masthead__tab-panel {
+  position: absolute;
+  top: 7.3rem;
+  right: -1px;
+  left: -1px;
+  z-index: 3;
+  display: none;
+  background-color: #fff;
+  border-right: 1px solid $keyline-color;
+  border-left: 1px solid $keyline-color;
+}
+.masthead__tab-button:hover + .masthead__tab-panel,
+.masthead__tab-button:focus + .masthead__tab-panel,
+.masthead__tab-panel:hover,
+.masthead__tab-panel:focus {
+  display: block;
+}
+.masthead__tab-panel-item {
+}
+.masthead__tab-panel-item a {
+  display: block;
+  padding: 0.8rem 0.8rem 0.7rem;
+  font-size: 1.4rem;
+  color: $text-color;
+  text-decoration: none;
+  border-bottom: 1px solid $keyline-color;
+}
+.masthead__tab-panel-item a:hover,
+.masthead__tab-panel-item a:focus {
+  text-decoration: none;
+  background-color: $keyline-color;
+}
+.masthead__tab-panel-item--selected a,
+.masthead__tab-panel-item--selected a:hover,
+.masthead__tab-panel-item--selected a:focus {
+  color: #fff;
+  background-color: $text-color-lighter;
+}

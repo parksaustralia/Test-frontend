@@ -1,0 +1,131 @@
+/**
+ * Tile
+ */
+
+.tile-wrapper {
+  margin-right: -3rem;
+  overflow: hidden;
+}
+.breakpoint-tablet-wide .tile-wrapper,
+.breakpoint-tablet .tile-wrapper,
+.breakpoint-phone .tile-wrapper {
+  margin-right: -2rem;
+}
+a.tile {
+  display: block;
+  float: left;
+  width: 25%;
+  margin-bottom: 3rem;
+  text-decoration: none;
+}
+a.tile--double-width {
+  display: block;
+  float: left;
+  width: 50%;
+  margin-bottom: 3rem;
+  text-decoration: none;
+}
+.breakpoint-tablet-wide a.tile,
+  .breakpoint-tablet a.tile {
+  width: 33.3333333%;
+  margin-bottom: 2rem;
+}
+.breakpoint-tablet-wide a.tile--double-width,
+  .breakpoint-tablet a.tile--double-width {
+  width: 66.6666666%;
+}
+.breakpoint-phone a.tile {
+  width: 50%;
+  margin-bottom: 2rem;
+}
+.breakpoint-phone a.tile--double-width {
+  width: 100%;
+}
+.tile__shim {
+  position: relative;
+  overflow: hidden;
+}
+.tile__shim:before {
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+  content: "";
+}
+.tile--double-width .tile__shim:before {
+  padding-top: 50%;
+}
+.tile__image-wrapper {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  bottom: 3rem;
+  left: 0;
+  overflow: hidden;
+  background-color: #eee;
+  border-top: 1px solid $keyline-color;
+  border-right: 1px solid $keyline-color;
+  border-left: 1px solid $keyline-color;
+}
+.breakpoint-tablet-wide .tile__image-wrapper,
+    .breakpoint-tablet .tile__image-wrapper {
+  right: 2rem;
+  bottom: 2rem;
+}
+.breakpoint-phone .tile__image-wrapper {
+  right: 2rem;
+  bottom: 2rem;
+}
+.tile__image-wrapper:before {
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+  content: "";
+}
+.tile--double-width .tile__image-wrapper:before {
+  padding-top: 50%;
+}
+.tile__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  transition: transform 600ms cubic-bezier(0.335, 0.015, 0.250, 1.105),
+  opacity 600ms cubic-bezier(0.335, 0.015, 0.250, 1.105);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.tile:hover .tile__image,
+        .tile:focus .tile__image {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+.tile__title {
+  padding: 1rem 2rem 0.9rem;
+  margin-top: -3rem;
+  margin-right: 3rem;
+  overflow: hidden;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $text-color-light;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: #fff;
+  border-right: 1px solid $keyline-color;
+  border-bottom: 1px solid $keyline-color;
+  border-left: 1px solid $keyline-color;
+}
+.tile__title--smaller {
+  font-size: 1.4rem;
+}
+.breakpoint-tablet-wide .tile__title,
+      .breakpoint-tablet .tile__title {
+  margin-top: -2rem;
+  margin-right: 2rem;
+}
+.breakpoint-phone .tile__title {
+  margin-top: -2rem;
+  margin-right: 2rem;
+}

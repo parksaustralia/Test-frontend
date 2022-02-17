@@ -1,0 +1,47 @@
+/**
+ * Norfolk Island National Park theme variables
+ */
+
+/* Colours */
+$primary-color: #0e545e;
+$primary-color-darker: #106470;
+$secondary-color: #5c1d62;
+$secondary-color-darker: #7b3881;
+$tertiary-color: #c2e883;
+$tertiary-color-darker: #c2e883;
+$keyline-color: #d4d4d4;
+$text-color: #333;
+$text-color-light: #4a4a4a;
+$text-color-lighter: #666;
+$text-color-lightest: #999;
+
+/* Components */
+$footer-logos-bg-color: $primary-color;
+$footer-nav-bg-color: #45104b;
+$footer-park-logos-bg-color: #370c3c;
+$icon-color: $secondary-color;
+$subscribe-icon-color: $secondary-color;
+$button-bg-color: $primary-color;
+$button-color: #fff;
+$button-bg-color-hover: $primary-color-darker;
+$button-color-hover: #fff;
+$button-alternate-bg-color: #fff;
+$button-alternate-bg-color-hover: $secondary-color;
+$button-alternate-color: $secondary-color;
+$button-alternate-color-hover: #fff;
+$h1-color: $primary-color;
+$h2-color: $primary-color;
+$h3-color: $secondary-color;
+$blockquote-border-color: $tertiary-color;
+$highlight-paragraph-color: $text-color-lightest;
+$footer-nav-heading-color: #fff;
+
+/* Typography */
+$font-base: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-base-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading-weight: 700;
+$font-intro-paragraph-weight: 400;

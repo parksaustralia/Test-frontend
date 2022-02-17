@@ -1,0 +1,71 @@
+/**
+ * Uluru theme variables
+ */
+
+/* Colours */
+// $primary-color: #af420a;
+// $primary-color-darker: #cf5618;
+// $secondary-color: #ffa12d;
+// $secondary-color-darker: #e58917;
+// $tertiary-color: #9b8d86;
+// $tertiary-color-darker: #9b8d86;
+// $keyline-color: #d4d4d4;
+// $text-color: #333;
+// $text-color-light: #4a4a4a;
+// $text-color-lighter: #666;
+// $text-color-lightest: #999;
+
+$cream: #fffde5;
+$clay: #d15321;
+$red: #ef4837;
+$orange: #f47722;
+$peach: #faa872;
+$sand: #ffcb5a;
+$charcoal: #414443;
+$olive-green: #4b722a;
+$dark-blue: #003e7b;
+$blue: #3685bc;
+$sky-purple: #b1b5db;
+
+$primary-color: $clay;
+$primary-color-darker: darken($primary-color, 10%);
+$secondary-color: $orange;
+$secondary-color-darker: darken($secondary-color, 10%);
+$tertiary-color: $olive-green;
+$tertiary-color-darker: darken($tertiary-color, 10%);
+$keyline-color: #d4d4d4;
+$text-color: $charcoal;
+$text-color-light: #4a4a4a;
+$text-color-lighter: #666;
+$text-color-lightest: #999;
+
+/* Components */
+$footer-logos-bg-color: $primary-color;
+$footer-nav-bg-color: #1e1e1e;
+$footer-park-logos-bg-color: #181818;
+$icon-color: $primary-color;
+$subscribe-icon-color: $secondary-color;
+$button-bg-color: $primary-color;
+$button-color: #fff;
+$button-bg-color-hover: $primary-color-darker;
+$button-color-hover: #fff;
+$button-alternate-bg-color: $secondary-color;
+$button-alternate-bg-color-hover: $secondary-color-darker;
+$button-alternate-color: #fff;
+$button-alternate-color-hover: #fff;
+$h1-color: $primary-color;
+$h2-color: $primary-color;
+$h3-color: $primary-color;
+$blockquote-border-color: $tertiary-color;
+$highlight-paragraph-color: $text-color;
+$footer-nav-heading-color: #fff;
+
+/* Typography */
+$font-base: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-base-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading: "Alegreya Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading-weight: 700;
+$font-intro-paragraph-weight: 400;

@@ -1,0 +1,92 @@
+/**
+ * Button
+ */
+
+.button,
+.copy .button {
+  position: relative;
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  font-family: $font-base;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $button-color;
+  text-align: center;
+  text-decoration: none;
+  background-color: $button-bg-color;
+  border-radius: 2px;
+  transition: background-color 150ms ease-in-out;
+}
+@include media("<tablet") {
+  .button,
+  .copy .buton {
+    width: 100%;
+  }
+}
+.button--alternate,
+.copy .button--alternate {
+  background-color: $button-alternate-bg-color;
+  color: $button-alternate-color;
+}
+.button--small,
+.copy .button--small {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.button--with-triangle,
+.copy .button--with-triangle {
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+.button--with-triangle span,
+.copy .button--with-triangle span {
+  position: relative;
+  display: inline-block;
+  margin-left: -1.6rem;
+}
+.button--with-triangle span:after,
+.copy .button--with-triangle span:after {
+  position: absolute;
+  top: 50%;
+  top: calc(50% - 4px);
+  right: -1.6rem;
+  display: block;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid $button-color;
+}
+.button--alternate.button--with-triangle span:after,
+.copy .button--alternate.button--with-triangle span:after {
+  border-left: 5px solid $button-alternate-color;
+}
+.button--with-triangle:hover span:after,
+.copy .button--with-triangle:focus span:after {
+  border-left: 5px solid $button-color-hover;
+}
+.button--alternate.button--with-triangle:hover span:after,
+.copy .button--alternate.button--with-triangle:focus span:after {
+  border-left: 5px solid $button-alternate-color-hover;
+}
+.button:hover,
+.button:focus,
+.copy .button:hover,
+.copy .button:focus {
+  color: $button-color-hover;
+  text-decoration: none;
+  background-color: $button-bg-color-hover;
+}
+.button--alternate:hover,
+.copy .button--alternate:hover,
+.button--alternate:focus,
+.copy .button--alternate:focus {
+  color: $button-alternate-color-hover;
+  background-color: $button-alternate-bg-color-hover;
+}
+
+.buttons .button:not(:last-child) {
+  margin-right: 1rem;
+}

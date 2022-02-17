@@ -1,0 +1,125 @@
+/**
+ * Section
+ */
+
+// section {
+// }
+.section--highlight-background {
+  background-color: #f9f9f9;
+}
+// .section__heading-wrapper {
+// }
+.breakpoint-tablet-wide .section__heading-wrapper,
+.breakpoint-tablet .section__heading-wrapper,
+.breakpoint-phone .section__heading-wrapper {
+  display: block;
+  text-align: center;
+}
+.section__heading {
+  font-family: $font-heading;
+  font-size: 2.8rem;
+  font-weight: $font-heading-weight;
+  color: $text-color;
+}
+.breakpoint-tablet-wide .section__heading-wrapper .section__heading,
+.breakpoint-tablet .section__heading-wrapper .section__heading,
+.breakpoint-phone .section__heading-wrapper .section__heading {
+  padding-bottom: 2rem;
+}
+.breakpoint-tablet-wide .section__heading {
+  font-size: 2.6rem;
+}
+.breakpoint-tablet .section__heading {
+  font-size: 2.4rem;
+}
+.breakpoint-phone .section__heading {
+  font-size: 2.2rem;
+}
+// .section__nav-wrapper,
+// .section__view-wrapper {
+// }
+.breakpoint-tablet-wide .section__view-wrapper,
+.breakpoint-tablet .section__view-wrapper,
+.breakpoint-phone .section__view-wrapper {
+  padding-top: 1rem;
+}
+.section__nav,
+.react-tabs__tab-list,
+.section__view {
+  display: inline-block;
+}
+.section__nav-item,
+.react-tabs__tab,
+.section__view-item {
+  display: inline-block;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.react-tabs__tab a {
+  display: block;
+  padding: 0.8rem 1.2rem 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $text-color-lighter;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;  
+}
+.section__nav-item a {
+  display: block;
+  padding: 0.8rem 1.2rem 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $text-color-lighter;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+}
+.react-tabs__tab a:hover,
+.react-tabs__tab a:focus,
+.section__nav-item a:hover,
+.section__nav-item a:focus {
+  color: #fff;
+  background-color: $secondary-color;
+}
+.section__nav-item--active a,
+.section__nav-item--active a:hover,
+.section__nav-item--active a:focus,
+.section__nav-item a.active,
+.react-tabs__tab--selected a,
+.react-tabs__tab--selected a:hover,
+.react-tabs__tab--selected a:focus,
+.section__nav-item a.active:hover,
+.section__nav-item a.active:focus {
+  color: #fff;
+  background-color: $primary-color;
+}
+// .section__view-item {
+// }
+.section__view-item a {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.3;
+  transition: opacity 150ms ease-in-out;
+}
+.section__view-item--list a {
+  width: 20px;
+  height: 15px;
+  background-image: url("./section/icon-list.svg");
+}
+.section__view-item--map a {
+  width: 15px;
+  height: 20px;
+  background-image: url("./section/icon-map.svg");
+  transform: translateY(-1px);
+}
+.section__view-item--active a {
+  opacity: 1;
+}

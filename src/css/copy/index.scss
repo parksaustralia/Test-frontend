@@ -1,0 +1,402 @@
+/**
+ * Copy
+ */
+
+/* Heading */
+
+.copy h1 {
+  padding-bottom: 2.6rem;
+  font-family: $font-heading;
+  font-size: 3rem;
+  font-weight: $font-heading-weight;
+  color: $h1-color;
+}
+.breakpoint-tablet-wide .copy h1,
+.breakpoint-tablet .copy h1 {
+  padding-bottom: 2.4rem;
+  font-size: 2.8rem;
+}
+.breakpoint-phone .copy h1 {
+  padding-bottom: 2.2rem;
+  font-size: 2.6rem;
+}
+.copy h2 {
+  padding-bottom: 2rem;
+  font-family: $font-heading;
+  font-size: 2.8rem;
+  font-weight: $font-heading-weight;
+  color: $h2-color;
+}
+.breakpoint-tablet-wide .copy h2,
+.breakpoint-tablet .copy h2 {
+  padding-bottom: 1.8rem;
+  font-size: 2.6rem;
+}
+.breakpoint-phone .copy h2 {
+  padding-bottom: 1.6rem;
+  font-size: 2.4rem;
+}
+.copy h3 {
+  padding-bottom: 2rem;
+  font-family: $font-heading;
+  font-size: 2.4rem;
+  font-weight: $font-heading-weight;
+  color: $h3-color;
+}
+.breakpoint-tablet-wide .copy h3,
+.breakpoint-tablet .copy h3 {
+  padding-bottom: 1.8rem;
+  font-size: 2.2rem;
+}
+.breakpoint-phone .copy h3 {
+  padding-bottom: 1.6rem;
+  font-size: 2rem;
+}
+.copy h4 {
+  padding-bottom: 1rem;
+  font-family: $font-heading;
+  font-size: 1.8rem;
+  font-weight: $font-heading-weight;
+}
+
+.copy p + h1,
+.copy p + h2,
+.copy p + h3,
+.copy p + h4 {
+  padding-top: 2rem;
+}
+
+/* Paragraph */
+
+.copy p,
+.copy.intro-section p:first-child {
+  color: $text-color;
+  padding-bottom: 1.5rem;
+  font-family: $font-body;
+  font-size: 1.8rem;
+  line-height: 1.65;
+}
+.copy p:last-of-type {
+  padding-bottom: 0;
+}
+.copy p.intro,
+.copy > p:first-child {
+  font-family: $font-heading;
+  font-size: 2.4rem;
+  font-weight: $font-intro-paragraph-weight;
+  line-height: 1.5;
+  color: $highlight-paragraph-color;
+}
+.breakpoint-tablet-wide .copy p.intro,
+.breakpoint-tablet .copy p.intro,
+.breakpoint-tablet-wide .copy > p:first-child,
+.breakpoint-tablet .copy > p:first-child {
+  font-size: 2rem;
+  line-height: 1.65;
+}
+.breakpoint-phone .copy p.intro,
+.breakpoint-phone .copy > p:first-child {
+  font-size: 1.8rem;
+  line-height: 1.65;
+}
+.copy p.alert-message {
+  font-family: $font-base;
+  font-weight: 700;
+  color: $primary-color;
+}
+
+/* Blockquote */
+
+.copy blockquote {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4.4rem;
+  border-left: 6px solid $blockquote-border-color;
+}
+.breakpoint-tablet-wide .copy blockquote,
+.breakpoint-tablet .copy blockquote,
+.breakpoint-phone .copy blockquote {
+  padding-left: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3.4rem;
+}
+.copy blockquote p {
+  font-size: 2.4rem;
+  color: $text-color-lighter;
+}
+.breakpoint-tablet-wide .copy blockquote p,
+.breakpoint-tablet .copy blockquote p {
+  font-size: 2.2rem;
+}
+.breakpoint-phone .copy blockquote p {
+  font-size: 2rem;
+}
+.copy blockquote p:only-child {
+  padding-bottom: 0;
+}
+
+/* Formatting */
+
+.copy strong {
+  font-weight: 700;
+}
+.copy em {
+  font-style: italic;
+}
+
+/* List */
+
+.copy ul,
+.copy ol {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1.9rem;
+  font-family: $font-body;
+  font-size: 1.8rem;
+  line-height: 1.65;
+}
+.copy ul li {
+  display: list-item;
+  padding-bottom: 1rem;
+  list-style: disc;
+}
+.copy ol li {
+  display: list-item;
+  padding-bottom: 1rem;
+  list-style: decimal;
+}
+.copy h1 + ul,
+.copy h1 + ol,
+.copy h2 + ul,
+.copy h2 + ol,
+.copy h3 + ul,
+.copy h3 + ol,
+.copy h4 + ul,
+.copy h4 + ol {
+  padding-top: 0;
+}
+
+/* Anchor */
+
+.copy a {
+  hyphens: auto;
+  text-decoration: underline;
+}
+
+/* Image */
+
+.copy img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+}
+.copy img[src*=".svg"] {
+  width: 100%;
+}
+
+/* Figure */
+
+.copy .figure-full-width,
+.copy .full-width {
+  width: 100%;
+  width: calc(100% + 20rem);
+  margin-left: -10rem;
+}
+.breakpoint-tablet-wide .copy .figure-full-width,
+.breakpoint-tablet .copy .figure-full-width {
+  width: 100%;
+  margin-left: 0;
+}
+.breakpoint-phone .copy .figure-full-width {
+  width: 100%;
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+}
+.copy .figure-float-left {
+  float: left;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+}
+.copy .figure-float-right {
+  float: right;
+  margin-bottom: 3rem;
+  margin-left: 3rem;
+}
+.copy .figure-small,
+.breakpoint-tablet .copy .figure-float-left,
+.breakpoint-tablet .copy .figure-float-right,
+.breakpoint-phone .copy .figure-float-left,
+.breakpoint-phone .copy .figure-float-right {
+  max-width: 20rem;
+}
+.copy .figure-medium {
+  max-width: 40rem;
+}
+.breakpoint-tablet .copy .figure-medium,
+.breakpoint-phone .copy .figure-medium {
+  width: 100%;
+}
+.copy figcaption,
+.copy img + em {
+  padding: 1.4rem 0 3rem;
+  font-size: 1.4rem;
+  color: $text-color-light;
+}
+.copy img + em {
+  display: block;
+  font-style: normal;
+}
+
+.breakpoint-phone .copy .figure-full-width figcaption {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+/* Responsive embed */
+
+.copy .responsive-embed {
+  position: relative;
+  z-index: 1;
+  height: 0;
+  padding-bottom: calc(56.25% + 5%); /* 16:9 */
+}
+.copy .responsive-embed--with-poster-image {
+  background-color: #000;
+  cursor: pointer;
+}
+.copy .responsive-embed__poster-image {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  z-index: 3;
+  transition: opacity 250ms ease-in-out, z-index 1ms linear 250ms;
+}
+.copy .responsive-embed__poster-image:after {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.95)
+  );
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.copy .responsive-embed--playing .responsive-embed__poster-image {
+  opacity: 0;
+  z-index: -1;
+}
+.copy .responsive-embed__play {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 8rem;
+  height: 7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -3.5rem;
+  margin-left: -4rem;
+  z-index: 2;
+  transition: background-color 150ms ease-in-out;
+}
+.copy .responsive-embed--with-poster-image:hover .responsive-embed__play,
+.copy .responsive-embed--with-poster-image:focus .responsive-embed__play {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.breakpoint-tablet .copy .responsive-embed__play {
+  top: 40%;
+}
+.breakpoint-phone .copy .responsive-embed__play,
+.breakpoint-phone
+  .copy
+  .responsive-embed--with-poster-image:hover
+  .responsive-embed__play,
+.breakpoint-phone
+  .copy
+  .responsive-embed--with-poster-image:focus
+  .responsive-embed__play {
+  background-color: $primary-color;
+  transform: scale(0.6);
+  transform-origin: top right;
+  top: 0;
+  right: 0;
+  left: auto;
+  border-radius: 0;
+  margin: 0;
+  transition: none;
+}
+.copy .responsive-embed__play:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 32px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -16px;
+}
+.copy .responsive-embed__text {
+  position: absolute;
+  left: 2rem;
+  right: 2em;
+  bottom: 2rem;
+  z-index: 2;
+}
+.copy .responsive-embed__watch {
+  color: #fff;
+  display: block;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-bottom: 0.6rem;
+}
+.copy .responsive-embed__watch em {
+  font-style: normal;
+}
+.copy .responsive-embed__watch span {
+  padding-left: 0.6rem;
+}
+.copy .responsive-embed__watch span:before {
+  content: "|";
+  padding-right: 0.6rem;
+  opacity: 0.5;
+}
+.copy .responsive-embed__title {
+  color: $highlight-paragraph-color;
+  line-height: 1.2;
+  padding-bottom: 0;
+  transition: color 150ms ease-in-out;
+}
+.copy .responsive-embed--with-poster-image:hover .responsive-embed__title,
+.copy .responsive-embed--with-poster-image:focus .responsive-embed__title {
+  color: #fff;
+}
+.breakpoint-tablet-wide .copy .responsive-embed__title,
+.breakpoint-tablet .copy .responsive-embed__title,
+.breakpoint-phone .copy .responsive-embed__title {
+  padding-bottom: 0;
+}
+.copy .responsive-embed video,
+.copy .responsive-embed object,
+.copy .responsive-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}

@@ -1,0 +1,46 @@
+/**
+ * Status table
+ */
+
+.status-table {}
+.breakpoint-tablet .status-table,
+.breakpoint-phone .status-table {
+  width: 81rem;
+}
+  .status-table__site-column {
+    width: 33%;
+  }
+  .status-table__status-column {
+    width: 12%;
+  }
+  .status-table__comment-column {
+    width: 30%;
+  }
+  .status-table__progress-column {
+    width: 25%;
+  }
+    .status-table .open {
+      color: #46a84e;
+    }
+    .status-table .alert {
+      color: #e8901d;
+    }
+    .status-table .closed {
+      color: #c91b00;
+    }
+    .status-table .date {
+      font-size: 1.2rem;
+    }
+    .status-table__progress-bar {
+      background-color: #eee;
+      display: block;
+      height: 0.6rem;
+      margin-bottom: 0.6rem;
+    }
+      .status-table__progress-bar em {
+        display: block;
+        height: 0.6rem;
+      }
+      .status-table__progress-bar--open em { background-color: #41ac51; }
+      .status-table__progress-bar--alert em { background-color: #e8901d; }
+      .status-table__progress-bar--closed em { background-color: #c91b00; }

@@ -1,0 +1,45 @@
+/**
+ * Australian National Botanic Gardens theme variables
+ */
+
+/* Colours */
+$primary-color: #87b5ad;
+$primary-color-darker: #65978f;
+$secondary-color: #f3c12c;
+$secondary-color-darker: #d8Ab24;
+$keyline-color: #d4d4d4;
+$text-color: #333;
+$text-color-light: #4a4a4a;
+$text-color-lighter: #666;
+$text-color-lightest: #999;
+
+/* Components */
+$footer-logos-bg-color: $primary-color;
+$footer-nav-bg-color: #463b36;
+$footer-park-logos-bg-color: #382f2b;
+$icon-color: $secondary-color;
+$subscribe-icon-color: $secondary-color;
+$button-bg-color: $secondary-color;
+$button-color: #fff;
+$button-bg-color-hover: $secondary-color-darker;
+$button-color-hover: #fff;
+$button-alternate-bg-color: $primary-color;
+$button-alternate-bg-color-hover: $primary-color-darker;
+$button-alternate-color: #fff;
+$button-alternate-color-hover: #fff;
+$h1-color: $primary-color;
+$h2-color: $primary-color;
+$h3-color: $text-color;
+$blockquote-border-color: $primary-color;
+$highlight-paragraph-color: $secondary-color;
+$footer-nav-heading-color: $secondary-color;
+
+/* Typography */
+$font-base: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-base-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body: "Lusitana", "Hoefler Text", Georgia, serif;
+$font-body-fallback: "Hoefler Text", Georgia, serif;
+$font-heading: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading-weight: 400;
+$font-intro-paragraph-weight: 400;

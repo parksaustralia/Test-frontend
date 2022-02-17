@@ -1,0 +1,37 @@
+/**
+ * Parallax scrolling background images
+ */
+
+.parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50rem;
+  height: 100vh;
+}
+.parallax__title {
+  position: relative;
+  font-family: $font-heading;
+  font-size: 8rem;
+  font-weight: $font-heading-weight;
+  color: #fff;
+  padding: 3rem;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  top: 19.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.parallax__credit {
+  @extend .hero-block__credit;
+}
+
+.breakpoint-tablet-wide .parallax__title {
+  font-size: 6rem;
+}
+.breakpoint-tablet .parallax__title,
+.breakpoint-phone .parallax__title {
+  font-size: 5rem;
+}

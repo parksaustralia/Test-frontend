@@ -1,0 +1,26 @@
+/**
+ * Section
+ */
+
+.share-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  opacity: 0.85;
+  transition: opacity 150ms ease-in-out;
+}
+.share-icon--greyscale {
+  opacity: 0.5;
+}
+.share-icon svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+.share-icon--greyscale path {
+  fill: #d1d1d1;
+}
+.share-icon:hover,
+.share-icon:focus {
+  opacity: 1;
+}

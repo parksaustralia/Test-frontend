@@ -1,0 +1,41 @@
+/**
+ * Documentation
+ */
+
+ .copy {
+
+  .documentation__toc li {
+    padding-bottom: 0;
+  }
+
+  .see-example {
+    font-size: 1.6rem;
+    margin-top: -2rem;
+  }
+  h4 + .see-example {
+    margin-top: -1rem;
+  }
+
+  .grid-example {
+    overflow: hidden;
+    margin-top: 30px;
+  }
+    .grid-col {
+      margin-bottom: 20px;
+      padding: 20px !important;
+      overflow: hidden;
+    }
+    .breakpoint-tablet-wide & .grid-col,
+    .breakpoint-tablet & .grid-col,
+    .breakpoint-phone & .grid-col {
+      margin-bottom: 0 !important;
+    }
+
+  & > p:last-of-type {
+    padding-bottom: inherit !important;
+  }
+
+  pre {
+    white-space: pre-wrap;
+  }
+}

@@ -1,0 +1,79 @@
+/**
+ * Text tile
+ */
+
+.text-tile {
+  padding-bottom: 1rem;
+  color: $text-color-light;
+}
+.text-tile--large {
+  margin-bottom: 3rem;
+}
+.text-tile__image {
+  display: block;
+  float: left;
+}
+.breakpoint-phone .text-tile__image {
+  max-width: 14rem;
+  height: auto;
+}
+.text-tile__text-wrapper {
+  padding-left: 20rem;
+}
+.breakpoint-phone .text-tile__text-wrapper {
+  padding-left: 16rem;
+}
+.text-tile__title {
+  padding-bottom: 1.2rem;
+  color: $text-color !important;
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+.text-tile--large .text-tile__title {
+  display: flex;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $keyline-color;
+
+  align-items: baseline;
+}
+.breakpoint-tablet .text-tile--large .text-tile__title,
+.breakpoint-phone .text-tile--large .text-tile__title {
+  display: block;
+}
+.copy p.text-tile__body {
+  padding-bottom: 3rem;
+  font-family: $font-base;
+  font-size: 1.4rem;
+  color: $text-color;
+}
+.breakpoint-tablet-wide .copy p.text-tile__body,
+.breakpoint-tablet .copy p.text-tile__body {
+  font-size: 1.4rem;
+}
+.breakpoint-phone .copy p.text-tile__body {
+  font-size: 1.4rem;
+  padding-bottom: 2rem;
+}
+.text-tile--large .copy p.text-tile__body {
+  font-size: 1.6rem;
+}
+.text-tile--call-to-action {
+  padding-top: 2rem;
+  border-top: 1px solid $keyline-color;
+}
+.text-tile--large .text-tile--call-to-action {
+  padding-top: 0;
+  margin-left: auto;
+  color: $primary-color;
+  border-top: none;
+}
+.breakpoint-tablet .text-tile--large .text-tile--call-to-action,
+.breakpoint-phone .text-tile--large .text-tile--call-to-action {
+  padding-top: 1rem;
+}

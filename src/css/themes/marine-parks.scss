@@ -1,0 +1,47 @@
+/**
+ * Australian Marine Parks theme variables
+ */
+
+/* Colours */
+$primary-color: #122756;
+$primary-color-darker: #0a1734;
+$secondary-color: #0093c3;
+$secondary-color-darker: #007aa2;
+$tertiary-color: #a05Eb5;
+$tertiary-color-darker: #803d95;
+$keyline-color: #d4d4d4;
+$text-color: #333;
+$text-color-light: #4a4a4a;
+$text-color-lighter: #666;
+$text-color-lightest: #999;
+
+/* Components */
+$footer-logos-bg-color: #0093c3;
+$footer-nav-bg-color: $primary-color;
+$footer-park-logos-bg-color: #0e1f45;
+$icon-color: $secondary-color;
+$subscribe-icon-color: $tertiary-color;
+$button-bg-color: $secondary-color;
+$button-color: #fff;
+$button-bg-color-hover: $secondary-color-darker;
+$button-color-hover: #fff;
+$button-alternate-bg-color: #fff;
+$button-alternate-bg-color-hover: $tertiary-color;
+$button-alternate-color: $secondary-color;
+$button-alternate-color-hover: #fff;
+$h1-color: $primary-color;
+$h2-color: $primary-color;
+$h3-color: $tertiary-color;
+$blockquote-border-color: #00ab8e;
+$highlight-paragraph-color: $text-color-lightest;
+$footer-nav-heading-color: $secondary-color;
+
+/* Typography */
+$font-base: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-base-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body: "Muli", "Hoefler Text", Georgia, serif;
+$font-body-fallback: "Hoefler Text", Georgia, serif;
+$font-heading: "Muli", "Hoefler Text", Georgia, serif;
+$font-heading-fallback: "Hoefler Text", Georgia, serif;
+$font-heading-weight: 700;
+$font-intro-paragraph-weight: 600;

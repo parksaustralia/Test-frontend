@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "isolatedModules": false,
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "noImplicitAny": false,    
+    "target": "es6",
+    "plugins": [
+      {
+        "name": "ts-graphql-plugin",
+        "schema": "src/__generated__/gatsby-schema.graphql",
+        "tag": "graphql"
+      }
+    ]
+  },
+  "include": ["./src/**/*"]
+}

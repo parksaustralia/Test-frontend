@@ -1,0 +1,135 @@
+/**
+ * Map embed
+ */
+
+.map-embed {
+  position: relative;
+  background-color: #eee;
+
+  // Fix Google Maps default infowindows styling inside .copy
+  .title, .address { // targets Google Maps elements
+    padding-bottom: 7px;
+  }
+  .title, .address-line, span {
+    margin-left: 0;
+  }
+  .address-line, span {
+    font-family: $font-base;
+    font-size: 1.4rem;
+  }
+  .map-embed__title, div .title {
+    color: $primary-color;
+    font-family: $font-base;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .view-link a span {
+    color: $primary-color;
+  }
+}
+.breakpoint-tablet-wide .map-embed,
+.breakpoint-tablet .map-embed,
+.breakpoint-phone .map-embed {
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+.breakpoint-tablet-wide .map-pullout .map-embed,
+.breakpoint-tablet .map-pullout .map-embed,
+.breakpoint-phone .map-pullout .map-embed {
+  margin-left: 0;
+  margin-right: 0;
+}
+.map-embed:before {
+  display: block;
+  width: 100%;
+  padding-top: 50%;
+  content: "";
+}
+.breakpoint-phone .map-embed:before {
+  padding-top: 90%;
+}
+.info-pullout .map-embed:before,
+.content-carousel__slide-map .map-embed:before {
+  display: none;
+}
+.map-embed__map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.map-embed__title {
+  position: relative;
+  display: block;
+  padding-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+.map-embed__title:before {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 30px;
+  height: 30px;
+  content: "";
+}
+.map-embed p {
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #4a4a4a;
+}
+.map-embed p.closed {
+  background-color: lighten(#c91b00, 55%);
+  border: 1px solid #c91b00;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #c91b00;
+}
+.map-embed p.open {
+  background-color: lighten(#41ac51, 50%);
+  border: 1px solid #41ac51;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #41ac51;
+}
+.map-embed p.alert {
+  background-color: lighten(#e8901d, 40%);
+  border: 1px solid #e8901d;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #e8901d;
+}
+.map-embed p:last-of-type {
+  padding-bottom: 10px;
+}
+  .map-embed p img {
+    display: block;
+    float: right;
+    max-width: 120px !important;
+    padding-left: 15px;
+    padding-bottom: 15px;
+  }
+  .map-embed .geojson-marker {
+    padding: 3px 0 2px 4px;
+    font-weight: bold;
+  }
+
+  #map {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+  }

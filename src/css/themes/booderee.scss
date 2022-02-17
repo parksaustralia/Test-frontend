@@ -1,0 +1,47 @@
+/**
+ * Booderee National Park theme variables
+ */
+
+/* Colours */
+$primary-color: #094f64;
+$primary-color-darker: #05627e;
+$secondary-color: #00713c;
+$secondary-color-darker: #008245;
+$tertiary-color: #f5c620;
+$tertiary-color-darker: #f5c620;
+$keyline-color: #d4d4d4;
+$text-color: #333;
+$text-color-light: #4a4a4a;
+$text-color-lighter: #666;
+$text-color-lightest: #999;
+
+/* Components */
+$footer-logos-bg-color: $secondary-color;
+$footer-nav-bg-color: #122757;
+$footer-park-logos-bg-color: #0e1f45;
+$icon-color: $secondary-color;
+$subscribe-icon-color: $tertiary-color;
+$button-bg-color: $primary-color;
+$button-color: #fff;
+$button-bg-color-hover: $primary-color-darker;
+$button-color-hover: #fff;
+$button-alternate-bg-color: $secondary-color;
+$button-alternate-bg-color-hover: $secondary-color-darker;
+$button-alternate-color: #fff;
+$button-alternate-color-hover: #fff;
+$h1-color: $primary-color;
+$h2-color: $primary-color;
+$h3-color: $secondary-color;
+$blockquote-border-color: $tertiary-color;
+$highlight-paragraph-color: $text-color-lightest;
+$footer-nav-heading-color: #fff;
+
+/* Typography */
+$font-base: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-base-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading-weight: 700;
+$font-intro-paragraph-weight: 400;

@@ -1,0 +1,55 @@
+/**
+ * Call to action
+ */
+
+.call-to-action,
+.copy .call-to-action {
+  position: relative;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $primary-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+}
+.call-to-action--center,
+.copy .call-to-action--center {
+  text-align: center;
+}
+.call-to-action--right,
+.copy .call-to-action--right {
+  text-align: right;
+}
+.call-to-action:hover,
+.call-to-action:focus,
+.copy .call-to-action:hover,
+.copy .call-to-action:focus {
+  color: $primary-color-darker;
+}
+.call-to-action span,
+  .copy .call-to-action span {
+  position: relative;
+  display: inline-block;
+  padding-right: 1rem;
+}
+.call-to-action span:after,
+  .copy .call-to-actiom span:after {
+  position: absolute;
+  top: 50%;
+  top: calc(50% - 4px);
+  right: 0;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid $primary-color;
+}
+.call-to-action:hover span:after,
+  .call-to-action:focus span:after,
+  .copy call-to-action:hover span:after,
+  .copy call-to-action:focus span:after {
+  border-left-color: $primary-color-darker;
+}
