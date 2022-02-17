@@ -105,9 +105,9 @@ export default function FooterMenu () {
   `) 
   return(
     data?(
-        <div className="footer__nav-wrapper clearfix">      
+        <>
           {generateMenu(data)} 
-        </div>
-      ):(<div/>)
+        </>
+      ):(<></>)
     )
   }

@@ -200,6 +200,7 @@
   padding-bottom: 0.6rem;
 }
 .footer__social-links {
+  list-style: none;
 }
 .breakpoint-tablet-wide .footer__social-links,
 .breakpoint-tablet .footer__social-links,
@@ -209,7 +210,7 @@
 .footer__social-link {
   float: left;
   padding-right: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2.5rem;
 }
 .footer__social-link:nth-child(5) {
   clear: left;

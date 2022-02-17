@@ -83,9 +83,9 @@ const FooterNavListBlock = () => (
       `
       }
       render={data => (     
-        <div className="footer__nav-wrapper clearfix">      
+        <>      
          {generateFooterNavItems(data)} 
-        </div>
+        </>
       )}
    />
 )
