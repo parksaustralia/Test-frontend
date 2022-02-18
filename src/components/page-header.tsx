@@ -1,18 +1,20 @@
 import React, { Component, Fragment } from "react"
 import MainMenu from  "./plugin/gatsby-plugin-drupal-menus-custom/main/index"
+import SiteLogoBlock from "./blocks/sitelogo"
 class PageHeader extends Component {
   render() {
     return (
       <div className="masthead">
         <div className="masthead__inner clearfix">
-          <h1 className="masthead__logo">
+          {/* <h1 className="masthead__logo">
             <a
               className="masthead__logo-anchor masthead__logo-anchor--uluru hide-text"
               href="/"
             >
               Uluṟu-Kata Tjuṯa National Park
             </a>
-          </h1>
+          </h1> */}
+          <SiteLogoBlock />
           <nav
             className="navigation clearfix"
             data-view-navigation-mobile=""

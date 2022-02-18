@@ -35,7 +35,6 @@
 .masthead__logo-anchor--kakadu {
   width: 107px;
   height: 40px;
-  background-image: url("./masthead/logo-kakadu.svg");
 }
 .breakpoint-phone .masthead__logo-anchor--kakadu {
   width: 85px;
@@ -45,8 +44,8 @@
   padding: 1px;
   width: 48px;
   height: 48px;
-  background-image: url("./masthead/logo-uluru.svg");
 }
+
 .breakpoint-phone .masthead__logo-anchor--uluru {
   width: 35px;
   height: 35px;
@@ -54,7 +53,6 @@
 .masthead__logo-anchor--booderee {
   width: 161px;
   height: 50px;
-  background-image: url("./masthead/logo-booderee.png");
 }
 .breakpoint-phone .masthead__logo-anchor--booderee {
   width: 113px;
@@ -63,7 +61,6 @@
 .masthead__logo-anchor--botanic-gardens {
   width: 203px;
   height: 30px;
-  background-image: url("./masthead/logo-botanic-gardens.svg");
 }
 .breakpoint-phone .masthead__logo-anchor--botanic-gardens {
   width: 160px;
@@ -101,7 +98,6 @@
 .masthead__logo-anchor--parks-australia {
   width: 178px;
   height: 43px;
-  background-image: url("./masthead/logo-parks-australia.svg");
 }
 .breakpoint-phone .masthead__logo-anchor--parks-australia {
   width: 106px;
@@ -176,8 +172,6 @@
 .masthead__tab-panel:hover,
 .masthead__tab-panel:focus {
   display: block;
-}
-.masthead__tab-panel-item {
 }
 .masthead__tab-panel-item a {
   display: block;

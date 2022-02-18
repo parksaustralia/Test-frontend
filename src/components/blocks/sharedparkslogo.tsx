@@ -17,7 +17,7 @@ export default function SharedParksLogoBlock() {
     data?.blockContentSharedFooterParksLogoPanel?.body?.value?(
       <div className="grid-col grid-col--12" dangerouslySetInnerHTML={{ __html: data.blockContentSharedFooterParksLogoPanel.body.value }} />
     ):(
-      <div />
+      <></>
     ) 
     
   )  

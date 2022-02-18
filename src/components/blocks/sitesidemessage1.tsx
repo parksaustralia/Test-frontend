@@ -8,7 +8,7 @@ export const SiteWideMessage1Block = ({ node }) => {
       node?.body?.value? (
         <div className="alert-box" dangerouslySetInnerHTML={{ __html: node.body.value }} />
       ) : (
-         <div />
+        <></>
       )
   ) 
 };
