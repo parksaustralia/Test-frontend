@@ -178,7 +178,7 @@ const generateMenu = (menuLinks) => {
 export default function MainMenu () {
   const data = useStaticQuery(graphql`
     query{
-      allMenuItem(sort: {fields: weight}, filter: {menu_name: {eq: "uktnp-top-nav"}}) {
+      allMenuItem(sort: {fields: weight}) {
         edges {
           node{  
             enabled
@@ -203,6 +203,6 @@ export default function MainMenu () {
         <ul className="navigation-dropdown navigation-dropdown--main clearfix">
           {generateMenu(data)} 
         </ul>
-      ):(<ul/>)
+      ):(<></>)
     )
   }
