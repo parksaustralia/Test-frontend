@@ -4,13 +4,15 @@ import { ButtonsParagraph } from  "./paragraphs/buttons";
 import { TabsImageTilesParagraph }  from "./paragraphs/tabsimagetiles"
 import { TitleArticleTypeTilesParagraph } from "./paragraphs/titlearticletypetiles"
 import { EmbedmapParagraph} from  "./paragraphs/embedmap"
+import { AccordionsParagraph } from "./paragraphs/accordions"
 
 const components = {
     paragraph__figure: FigureParagraph,
     paragraph__buttons: ButtonsParagraph,
     paragraph__title_tab_image_tiles: TabsImageTilesParagraph,
     paragraph__title_article_type_tiles: TitleArticleTypeTilesParagraph,
-    paragraph__embed_map: EmbedmapParagraph
+    paragraph__embed_map: EmbedmapParagraph,
+    paragraph__accordions_: AccordionsParagraph
 };
 
 export const getParagraph = node => {

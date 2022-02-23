@@ -40,6 +40,7 @@
 }
 .navigation-dropdown__anchor span {
   position: relative;
+  font-size: 14px;
 }
 .navigation-dropdown__anchor span:after {
   position: absolute;
@@ -132,4 +133,11 @@
 
 .navigation-dropdown__panel-list-item a.mobile-only {
   display: none;
+}
+
+.accordion {
+   font-size: 1.5rem !important;
+}
+.accordion-button {
+  font-size: 1.5rem !important;
 }

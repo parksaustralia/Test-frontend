@@ -121,6 +121,7 @@ export const query = graphql`
           ...ParagrapTabsimagetiles
           ...ParagraphTitlearticletypetiles
           ...ParagraphEmbedmap
+          ...ParagrapAccoudions
         }
       }
     } 

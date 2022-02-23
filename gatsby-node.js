@@ -4,7 +4,7 @@ const park = process.env.GATSBY_PARK;
 
 // const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
 
-async function createAllPages(createPage, pageTemplate, articleTemplate, informationTemplate, graphql) {
+async function createAllPages(createPage, pageTemplate, articleTemplate, informationTemplate, postTemplate, graphql) {
   const result = await graphql(
     `
       query($park: String!) {
@@ -57,7 +57,24 @@ async function createAllPages(createPage, pageTemplate, articleTemplate, informa
                 value
               }
             }
-        }  
+        } 
+        
+        posts: allNodePost(
+          filter: {
+            field_site: { drupal_internal__target_id: { eq: $park } }
+            path: { alias: { ne: null } }
+          }
+          ) {
+            nodes {
+              drupalId: drupal_id
+              path {
+                alias
+              }
+              body {
+                value
+              }
+            }
+        }        
       }
     `,
     { park }
@@ -112,6 +129,23 @@ async function createAllPages(createPage, pageTemplate, articleTemplate, informa
         drupalId: node.drupalId,
       },
     });
+  }); 
+  
+  result.data.posts.nodes.forEach((node) => {
+    let path = node.path.alias.replace(`/${park}`, "");
+
+    if (path == "") {
+      path = "/";
+    }
+
+    createPage({
+      path,
+      component: postTemplate,
+      context: {
+        park:`${park}`,
+        drupalId: node.drupalId,
+      },
+    });
   });   
 };
 
@@ -120,7 +154,8 @@ exports.createPages = async ({ graphql, actions }) => {
   const pageTemplate = path.resolve(`src/templates/page.tsx`);
   const articleTemplate = path.resolve(`src/templates/article.tsx`)
   const informationTemplate = path.resolve(`src/templates/information.tsx`)
-  await createAllPages(createPage, pageTemplate, articleTemplate, informationTemplate, graphql);
+  const postTemplate = path.resolve(`src/templates/post.tsx`);
+  await createAllPages(createPage, pageTemplate, articleTemplate, informationTemplate, postTemplate, graphql);
 };
 
 // exports.onCreateNode = async ({

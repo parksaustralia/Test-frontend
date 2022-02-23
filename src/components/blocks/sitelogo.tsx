@@ -38,6 +38,7 @@ export default function SiteLogoBlock() {
       return (
         <a
           className="masthead__logo-anchor hide-text"
+          key={index.toString()}
           href="/"
         >
           <img className={siteLogoClass} src={bgImgSrc} alt={bgImgAlt} />

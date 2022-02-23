@@ -10,7 +10,7 @@ export const SocialMediaLinksBlock = ({ node }) => {
     const imgSrc = apiDomain + link.relationships.field_social_media_svg_icon.relationships.field_media_image_1.uri.url  
     const aSrc = link.field_social_media_link_url.uri   
     return(
-    <li className="page-header__social-icon" key={`social-icon-${index}`}> 
+    <li className="page-header__social-icon" key={index.toString()}> 
       <a className="share-icon hide-text" href={aSrc} target="_blank"> 
       <img src={imgSrc} ></img>
       </a> 
@@ -22,7 +22,7 @@ export const SocialMediaLinksBlock = ({ node }) => {
       linksLis? ( 
         linksLis
       ) : (
-         <div />
+        <></>
       )
   ) 
 };

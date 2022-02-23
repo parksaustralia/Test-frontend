@@ -7,7 +7,7 @@ const generateFooterNavItems = (data) => {
   const footerNaveListArr = data.blockContentFooterNavList.relationships.field_footer_nav_items
   const socialLinks = socialLinksArr.map((socialLink, index: Number) => {
     return(
-      <li className="footer__social-link" key="sociallink-${index}">
+      <li className="footer__social-link" key={index.toString()}>
         <a className="share-icon share-icon--greyscale hide-text" 
           href={socialLink.field_social_media_link_url.uri}>
           <img src={`${apiDomain}${socialLink.relationships.field_social_media_svg_icon.relationships.field_media_image_1.uri.url}`} />
@@ -17,7 +17,7 @@ const generateFooterNavItems = (data) => {
   })
   const footerNaveList = footerNaveListArr.map((navItem, index: Number) => {
     return(
-      <li className="footer__nav-list-item" key="sociallink-${index}">
+      <li className="footer__nav-list-item" key={index.toString()}>
         <a className="mt-medium"
           href={navItem.field_social_media_link_url.uri}>
           <img src={`${apiDomain}${navItem.relationships.field_social_media_svg_icon.relationships.field_media_image_1.uri.url}`} />

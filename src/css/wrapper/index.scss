@@ -1,0 +1,112 @@
+/**
+ *wrapper
+ */
+
+.wrapper {
+  max-width: 1570px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.photo {
+  display: inline-block;
+  width: 100%;
+}
+h1.page-title {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+.region-sidebar-first .menu-item {
+  display: block;
+  margin: 0;
+  padding-top: 0.2em;
+  list-style: none
+}
+.main-content-block ul{
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+ @media only screen and (min-width: 1170px) {
+  .region.region-breadcrumb + main {
+      margin-top: 0.5rem;
+      padding-top: 0;
+  }   
+  main {
+    margin: auto;
+    background-color: white;
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+ .wrapper {
+     display: flex;
+     flex-direction: row;
+ }
+ main aside.layout-sidebar-first {
+     flex: 0 1;
+     flex-basis: 252px;
+     box-sizing: border-box;
+     min-width: 252px;
+     padding-top: 0;
+     padding-left: 0;
+     padding-right: 0;
+     padding-bottom: 0;
+     margin-left: 2rem;
+ }
+ main aside.layout-sidebar-first {
+  padding: 1rem 2rem 0;
+  }
+  .region-sidebar-first nav {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+  }  
+  .visually-hidden {
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+    width: 1px;
+    height: 1px;
+    word-wrap: normal;
+  }  
+  .region-sidebar-first nav > .menu {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    border-bottom: 1px solid #C1C1C1;
+  }
+  .region-sidebar-first nav > .menu > .menu-item > a:first-child {
+    position: relative;
+    padding-left: 0.857rem;
+    font-weight: 700;
+    color: black;
+    border-top: none;
+  }    
+  .region-sidebar-first .menu-item > a {
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.429rem 0.714rem 0.429rem 0.571rem;
+    text-decoration: none;
+    color: black;
+    border-top: 1px solid #C1C1C1;
+  } 
+  main aside.layout-sidebar-second {
+      order: 3;
+      flex: 0 1;
+      flex-basis: 252px;
+      box-sizing: border-box;
+      min-width: 252px;
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      margin-right: 2rem;
+  }   
+  
+}
