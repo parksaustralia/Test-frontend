@@ -11,9 +11,8 @@ export const TitleImageTilesParagraph = ({ node }) => {
     const imageTileTitle = imgDiv.field_tile_image_title?.value;
     const aClass = imgDiv.field_tile_image_class;
     const aLink = imgDiv.field_tile_link_url;
-    const vKey = `alink`+idx;
     return(
-      <a key={vKey} className={aClass} href={aLink}> 
+      <a key={idx.toString()} className={aClass} href={aLink}> 
         <div className="tile__shim"> 
           <div className="tile__image-wrapper"> 
             <img className="tile__image" src={image} /> 

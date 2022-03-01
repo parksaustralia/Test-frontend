@@ -5,24 +5,24 @@ const park = process.env.GATSBY_PARK;
 
 export const MailChimpOptInFormBlock = ({ node }) => {
   const apiDomain = process.env.GATSBY_API_DOMAIN
-  const formType = node.field_form_type
-  const formId = node.field_form_type + "-form"
-  const formCheckBox = node.field_form_type + "-checkbox"
-  const formConcentId = node.field_form_type + "-concent"
-  const mailchimpForm = node.relationships.field_mailchimp_form_paragraph || []
-  const formTitle = mailchimpForm.field_form_title
-  const formText = mailchimpForm.field_form_text.value
-  const formAction = mailchimpForm.field_action
-  const botKey = mailchimpForm.field_bot_key
-  const buttonText = mailchimpForm.field_button_text
-  const photo1Src = apiDomain + mailchimpForm.relationships.field_photo_1.relationships.field_media_image.uri.url 
-  const photo1Alt = apiDomain + mailchimpForm.relationships.field_photo_1.name
-  const photo2Src = apiDomain + mailchimpForm.relationships.field_photo_2_.relationships.field_media_image.uri.url 
-  const photo2Alt = apiDomain + mailchimpForm.relationships.field_photo_2_.name 
-  const photo3Src = apiDomain + mailchimpForm.relationships.field_photo_3.relationships.field_media_image.uri.url 
-  const photo3Alt = apiDomain + mailchimpForm.relationships.field_photo_3.name
-  const photo4Src = apiDomain + mailchimpForm.relationships.field_photo_4.relationships.field_media_image.uri.url 
-  const photo4Alt = apiDomain + mailchimpForm.relationships.field_photo_4.name
+  const formType = node?.field_form_type?(node.field_form_type):("")
+  const formId = node?.field_form_type?(node.field_form_type + "-form"):("")
+  const formCheckBox = node?.field_form_type?(node.field_form_type + "-checkbox"):("")
+  const formConcentId = node?.field_form_type?(node.field_form_type + "-concent"):("")
+  const mailchimpForm = node?.relationships?.field_mailchimp_form_paragraph || []
+  const formTitle = mailchimpForm?.field_form_title?(mailchimpForm.field_form_title):(<></>)
+  const formText = mailchimpForm?.field_form_text?.value?(mailchimpForm.field_form_text.value):(<></>)
+  const formAction = mailchimpForm?.field_action?(mailchimpForm.field_action):(<></>)
+  const botKey = mailchimpForm?.field_bot_key?(mailchimpForm.field_bot_key):(<></>)
+  const buttonText = mailchimpForm?.field_button_text?(mailchimpForm.field_button_text):(<></>)
+  const photo1Src = mailchimpForm?.relationships?.field_photo_1?.relationships?.field_media_image?.uri?.url?(apiDomain + mailchimpForm.relationships.field_photo_1.relationships.field_media_image.uri.url):(<></>) 
+  const photo1Alt = mailchimpForm?.relationships?.field_photo_1?.name?(apiDomain + mailchimpForm.relationships.field_photo_1.name):(<></>)
+  const photo2Src = mailchimpForm?.relationships?.field_photo_2_?.relationships?.field_media_image?.uri?.url?(apiDomain + mailchimpForm.relationships.field_photo_2_.relationships.field_media_image.uri.url):(<></>) 
+  const photo2Alt = mailchimpForm?.relationships?.field_photo_2_?.name?(apiDomain + mailchimpForm.relationships.field_photo_2_.name):(<></>) 
+  const photo3Src = mailchimpForm?.relationships?.field_photo_3?.relationships?.field_media_image.uri.url?(apiDomain + mailchimpForm.relationships.field_photo_3.relationships.field_media_image.uri.url):(<></>) 
+  const photo3Alt = mailchimpForm?.relationships?.field_photo_3?.name?(apiDomain + mailchimpForm.relationships.field_photo_3.name):(<></>)
+  const photo4Src = mailchimpForm?.relationships?.field_photo_4?.relationships?.field_media_image?.uri?.url?(apiDomain + mailchimpForm.relationships.field_photo_4.relationships.field_media_image.uri.url):(<></>) 
+  const photo4Alt = mailchimpForm?.relationships?.field_photo_4?.name?(apiDomain + mailchimpForm.relationships.field_photo_4.name):(<></>)
   const currentPage = window.location.href
   const subscribeButtonClick = (e) => {
     // var formCheckBoxElement = document.getElementById(formCheckBox.toString())
@@ -33,7 +33,7 @@ export const MailChimpOptInFormBlock = ({ node }) => {
   }
    
   return(            
-    mailchimpForm? ( 
+    (node === null)? ( <></> ):
       (formType === "Bottom")?(
       <section className="section--with-subscribe-block py-xlarge" id="control">
         <div className="grid-wrapper">
@@ -141,12 +141,8 @@ export const MailChimpOptInFormBlock = ({ node }) => {
             </form>
           </div>
         </div>
-      )
-
-      ) : (
-        <></>
-      )
-  ) 
+      ) 
+  )
 };
 
 export const fragment  = graphql`
