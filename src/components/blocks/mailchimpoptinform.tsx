@@ -23,7 +23,7 @@ export const MailChimpOptInFormBlock = ({ node }) => {
   const photo3Alt = mailchimpForm?.relationships?.field_photo_3?.name?(apiDomain + mailchimpForm.relationships.field_photo_3.name):("")
   const photo4Src = mailchimpForm?.relationships?.field_photo_4?.relationships?.field_media_image?.uri?.url?(apiDomain + mailchimpForm.relationships.field_photo_4.relationships.field_media_image.uri.url):("") 
   const photo4Alt = mailchimpForm?.relationships?.field_photo_4?.name?(apiDomain + mailchimpForm.relationships.field_photo_4.name):("")
-  const currentPage = typeof window !== null ? window.location.href:''
+  const currentPage = ''//typeof window !== null ? window.location.href:''
   const subscribeButtonClick = (e) => {
     // var formCheckBoxElement = document.getElementById(formCheckBox.toString())
     // var formConsenttElement = document.getElementById(formConsenttId.toString())
