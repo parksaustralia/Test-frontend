@@ -54,7 +54,7 @@ export const TabsImageTilesParagraph = ({ node }) => {
     )
   }
   tilesTabs.map((tabDiv, index: Number) => {
-    tabsItems.push(tabDiv.field_tile_tab_title.value)
+    tabsItems.push(tabDiv.field_tile_tab_title?.value)
     const tileImages = tabDiv.relationships.field_tile_images_ || []
     let tabsPanelsItem = ``
     tileImages.map((imgDiv, idx: Number) => { 

@@ -1,6 +1,23 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-
+const park = process.env.GATSBY_PARK
+if(park === "amp") {
+  require ("../../css/marine-parks.scss");
+} else if(park =="bnp") {
+  require ("../../css/booderee.scss");
+} else if(park =="cinp") {
+  require ("../../css/christmas-island.scss");
+} else if(park =="corp") {
+  require ("../../css/parks-australia.scss");
+} else if(park =="knp") {
+  require ("../../css/kakadu.scss");
+} else if(park =="ninp") {
+  require ("../../css/norfolk-island.scss");
+} else if(park =="pknp") {
+  require ("../../css/kakadu.scss");
+} else if(park =="uktnp") {
+  require ("../../css/uluru.scss");
+}
 export default function SiteLogoBlock() {
   const park = process.env.GATSBY_PARK; 
   const apiDomain = process.env.GATSBY_API_DOMAIN

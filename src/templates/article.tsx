@@ -1,9 +1,12 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { SocialMediaLinksBlock } from "../components/blocks/socialmedialinks"
+import { MailChimpOptInFormBlock } from "../components/blocks/mailchimpoptinform"
 import YoutubeEmbed from "../components/video/YoutubeEmbed"
 export default function ArticleTemplate({ data }) { 
   const soicialLinks = <SocialMediaLinksBlock node={data.blockContentSocialMedia} />
+  const mailChimpOptInBottomForm = <MailChimpOptInFormBlock node ={data.bottomForm} />
+  const mailChimpOptInSideBarForm = <MailChimpOptInFormBlock node ={data.sideBarForm} />
   let heroImageSection
   if(data.nodeArticle.relationships.field_hero_image != null) {
     const apiDomain = process.env.GATSBY_API_DOMAIN; 
@@ -59,31 +62,34 @@ export default function ArticleTemplate({ data }) {
         </div> 
       </section> 
       {heroImageSection}
-      <section className="pb-medium"> 
+      <section className="section--with-subscribe-block pb-medium">
         <div className="grid-wrapper"> 
           <div className="grid-row clearfix"> 
-            <div className="grid-col grid-col--8 grid-col--push-2 tb-grid-col--10 tb-grid-col--push-1 ph-grid-col--12 ph-grid-col--push-0"> 
-            <div className="copy">
-              {data.nodeArticle.body?.value ? (
-                  <div
-                    dangerouslySetInnerHTML={{ __html: data.nodeArticle.body.value }}
-                  />
-                ) : (
-                  ""
-                )}
-              {embedVideoSection} 
+            <div className="grid-col grid-col--8 tb-grid-col--12 ph-grid-col--12">
+              <div className="copy">
+                {data.nodeArticle.body?.value ? (
+                    <div
+                      dangerouslySetInnerHTML={{ __html: data.nodeArticle.body.value }}
+                    />
+                  ) : (
+                    <></>
+                  )}
+                {embedVideoSection} 
+              </div>
+            </div> 
+            <div className="grid-col grid-col--3 grid-col--push-1 tb-grid-col--12 tb-grid-col--push-0 ph-grid-col--12 ph-grid-col--push-0">
+             {mailChimpOptInSideBarForm}
             </div>
-          </div> 
-        </div> 
+          </div>  
         </div> 
       </section> 
-        
+      {mailChimpOptInBottomForm}
     </div>
         </>
   );
 }
 export const query = graphql`
-  query($drupalId: String!) {
+  query($park: String!, $drupalId: String!) {
     nodeArticle(drupal_id: { eq: $drupalId }) {
       body {
         value
@@ -136,6 +142,18 @@ export const query = graphql`
     } 
     blockContentSocialMedia{
       ...SocialMediaLinksBlockQuery
-    }   
+    }  
+    sideBarForm: blockContentMailchimpOptInForm(
+      field_site_for_block: {drupal_internal__target_id: {eq: $park}}
+      field_form_type: {eq: "Sidebar"}
+    ) {
+      ...MailChimpOptInFormBlockQuery
+    }
+    bottomForm: blockContentMailchimpOptInForm(
+      field_site_for_block: {drupal_internal__target_id: {eq: $park}}
+      field_form_type: {eq: "Bottom"}
+    ) {
+      ...MailChimpOptInFormBlockQuery
+    }
   }
 `;

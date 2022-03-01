@@ -21,7 +21,14 @@ export default function PostTemplate({ data }) {
       <div className="layout-content sidebar-left">
         <div className="region region-content">
           <div id="block-page-title-block" className="block block-core block-page-title-block">
-            <h1 className="page-title"><span className="field field--name-title field--type-string field--label-hidden">Media centre | Parks Australia</span>
+            <h1 className="page-title">
+            {data.nodePost.title? (
+            <span className="field field--name-title field--type-string field--label-hidden"
+              dangerouslySetInnerHTML={{ __html: data.nodePost.title }}
+            />
+            ) : (
+              <></>
+            )}
             </h1>
           </div>
 

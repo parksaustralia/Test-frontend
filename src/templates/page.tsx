@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Slider from "react-slick";
 import { SiteWideMessage1Block } from "../components/blocks/sitesidemessage1"
 import { SocialMediaLinksBlock } from "../components/blocks/socialmedialinks"
+import { MailChimpOptInFormBlock } from "../components/blocks/mailchimpoptinform"
 import { getParagraph } from "../components/paragraphs";
 
 
@@ -12,6 +13,7 @@ export default function PageTemplate({ data }) {
   const heroImages = data.nodePage.relationships.field_hero || []
   const soicialLinks = <SocialMediaLinksBlock node={data.blockContentSocialMedia} />
   const message1 = <SiteWideMessage1Block node={data.blockContentSiteWideMessage1} />
+  const mailChimpOptInBottomForm = <MailChimpOptInFormBlock node ={data.bottomForm} />
   const numberOfHeroImages = heroImages.length
   const images = heroImages.map(
     (heroImage, index: Number) => {  
@@ -86,7 +88,7 @@ export default function PageTemplate({ data }) {
                     dangerouslySetInnerHTML={{ __html: data.nodePage.body.value }}
                   />
                 ) : (
-                  ""
+                  <></>
                 )}
               </div>
             </div>
@@ -94,6 +96,7 @@ export default function PageTemplate({ data }) {
         </div>
       </section>
       {paragraphs}
+      {mailChimpOptInBottomForm}
     </>
   );
 }
@@ -122,6 +125,7 @@ export const query = graphql`
           ...ParagraphTitlearticletypetiles
           ...ParagraphEmbedmap
           ...ParagrapAccoudions
+          ...ParagrapTitleimagetiles
         }
       }
     } 
@@ -133,5 +137,11 @@ export const query = graphql`
     blockContentSocialMedia{
       ...SocialMediaLinksBlockQuery
     }
+    bottomForm: blockContentMailchimpOptInForm(
+      field_site_for_block: {drupal_internal__target_id: {eq: $park}}
+      field_form_type: {eq: "Bottom"}
+    ) {
+      ...MailChimpOptInFormBlockQuery
+    }     
   }
 `;
