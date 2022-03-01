@@ -8,25 +8,25 @@ export const MailChimpOptInFormBlock = ({ node }) => {
   const formType = node?.field_form_type?(node.field_form_type):("")
   const formId = node?.field_form_type?(node.field_form_type + "-form"):("")
   const formCheckBox = node?.field_form_type?(node.field_form_type + "-checkbox"):("")
-  const formConcentId = node?.field_form_type?(node.field_form_type + "-concent"):("")
+  const formConsenttId = node?.field_form_type?(node.field_form_type + "-consentt"):("")
   const mailchimpForm = node?.relationships?.field_mailchimp_form_paragraph || []
-  const formTitle = mailchimpForm?.field_form_title?(mailchimpForm.field_form_title):(<></>)
-  const formText = mailchimpForm?.field_form_text?.value?(mailchimpForm.field_form_text.value):(<></>)
-  const formAction = mailchimpForm?.field_action?(mailchimpForm.field_action):(<></>)
-  const botKey = mailchimpForm?.field_bot_key?(mailchimpForm.field_bot_key):(<></>)
-  const buttonText = mailchimpForm?.field_button_text?(mailchimpForm.field_button_text):(<></>)
-  const photo1Src = mailchimpForm?.relationships?.field_photo_1?.relationships?.field_media_image?.uri?.url?(apiDomain + mailchimpForm.relationships.field_photo_1.relationships.field_media_image.uri.url):(<></>) 
-  const photo1Alt = mailchimpForm?.relationships?.field_photo_1?.name?(apiDomain + mailchimpForm.relationships.field_photo_1.name):(<></>)
-  const photo2Src = mailchimpForm?.relationships?.field_photo_2_?.relationships?.field_media_image?.uri?.url?(apiDomain + mailchimpForm.relationships.field_photo_2_.relationships.field_media_image.uri.url):(<></>) 
-  const photo2Alt = mailchimpForm?.relationships?.field_photo_2_?.name?(apiDomain + mailchimpForm.relationships.field_photo_2_.name):(<></>) 
-  const photo3Src = mailchimpForm?.relationships?.field_photo_3?.relationships?.field_media_image.uri.url?(apiDomain + mailchimpForm.relationships.field_photo_3.relationships.field_media_image.uri.url):(<></>) 
-  const photo3Alt = mailchimpForm?.relationships?.field_photo_3?.name?(apiDomain + mailchimpForm.relationships.field_photo_3.name):(<></>)
-  const photo4Src = mailchimpForm?.relationships?.field_photo_4?.relationships?.field_media_image?.uri?.url?(apiDomain + mailchimpForm.relationships.field_photo_4.relationships.field_media_image.uri.url):(<></>) 
-  const photo4Alt = mailchimpForm?.relationships?.field_photo_4?.name?(apiDomain + mailchimpForm.relationships.field_photo_4.name):(<></>)
-  const currentPage = window.location.href
+  const formTitle = mailchimpForm?.field_form_title?(mailchimpForm.field_form_title):("")
+  const formText = mailchimpForm?.field_form_text?.value?(mailchimpForm.field_form_text.value):("")
+  const formAction = mailchimpForm?.field_action?(mailchimpForm.field_action):("")
+  const botKey = mailchimpForm?.field_bot_key?(mailchimpForm.field_bot_key):("")
+  const buttonText = mailchimpForm?.field_button_text?(mailchimpForm.field_button_text):("")
+  const photo1Src = mailchimpForm?.relationships?.field_photo_1?.relationships?.field_media_image?.uri?.url?(apiDomain + mailchimpForm.relationships.field_photo_1.relationships.field_media_image.uri.url):("") 
+  const photo1Alt = mailchimpForm?.relationships?.field_photo_1?.name?(apiDomain + mailchimpForm.relationships.field_photo_1.name):("")
+  const photo2Src = mailchimpForm?.relationships?.field_photo_2_?.relationships?.field_media_image?.uri?.url?(apiDomain + mailchimpForm.relationships.field_photo_2_.relationships.field_media_image.uri.url):("") 
+  const photo2Alt = mailchimpForm?.relationships?.field_photo_2_?.name?(apiDomain + mailchimpForm.relationships.field_photo_2_.name):("") 
+  const photo3Src = mailchimpForm?.relationships?.field_photo_3?.relationships?.field_media_image.uri.url?(apiDomain + mailchimpForm.relationships.field_photo_3.relationships.field_media_image.uri.url):("") 
+  const photo3Alt = mailchimpForm?.relationships?.field_photo_3?.name?(apiDomain + mailchimpForm.relationships.field_photo_3.name):("")
+  const photo4Src = mailchimpForm?.relationships?.field_photo_4?.relationships?.field_media_image?.uri?.url?(apiDomain + mailchimpForm.relationships.field_photo_4.relationships.field_media_image.uri.url):("") 
+  const photo4Alt = mailchimpForm?.relationships?.field_photo_4?.name?(apiDomain + mailchimpForm.relationships.field_photo_4.name):("")
+  const currentPage = window?.location?.href?(window.location.href):("")
   const subscribeButtonClick = (e) => {
     // var formCheckBoxElement = document.getElementById(formCheckBox.toString())
-    // var formConcentElement = document.getElementById(formConcentId.toString())
+    // var formConsenttElement = document.getElementById(formConsenttId.toString())
     // if(formCheckBoxElement?.checked? == false) {
     //       [0].classList.add('consent--alert');
     // }
@@ -34,7 +34,7 @@ export const MailChimpOptInFormBlock = ({ node }) => {
    
   return(            
     (node === null)? ( <></> ):
-      (formType === "Bottom")?(
+      (formType === "bottom")?(
       <section className="section--with-subscribe-block py-xlarge" id="control">
         <div className="grid-wrapper">
           <div className="grid-row clearfix">
@@ -77,7 +77,7 @@ export const MailChimpOptInFormBlock = ({ node }) => {
                       {buttonText}
                     </button>
                     <hr/>
-                    <div className="consent" id={formConcentId}>
+                    <div className="consent" id={formConsenttId}>
                       <input className="consent__checkbox"
                             name="CONSENT"
                             id={formCheckBox}
@@ -129,7 +129,7 @@ export const MailChimpOptInFormBlock = ({ node }) => {
                 <button className="button button--small subscribe-block__button" type="submit">
                   {buttonText}
                 </button>
-                <div className="consent" id={formConcentId}>
+                <div className="consent" id={formConsenttId}>
                   <input className="consent__checkbox"
                         name="CONSENT"
                         id={formCheckBox}

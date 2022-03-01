@@ -1,0 +1,38 @@
+.consent {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.consent--alert {
+  color: #721c24;
+  background-color: #f8d7da;
+  transition: background-color 0.7s ease-in;
+}
+
+.consent__checkbox {
+  opacity: 0;
+  float: left;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.consent__checkbox + .consent__label {
+  margin: 0;
+  clear: none;
+  display: block;
+  padding-left: 23px;
+  line-height: 16px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.1rem;
+  text-align: left;
+
+  background: image-url("consent-checkbox/checkbox-unchecked.png") no-repeat,
+    image-url("consent-checkbox/checkbox-checked.png") no-repeat;
+}
+
+.consent__checkbox:checked + .consent__label {
+  background: image-url("consent-checkbox/checkbox-checked.png") no-repeat;
+}
