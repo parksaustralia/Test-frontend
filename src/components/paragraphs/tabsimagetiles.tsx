@@ -54,7 +54,7 @@ export const TabsImageTilesParagraph = ({ node }) => {
     )
   }
   tilesTabs.map((tabDiv, index: Number) => {
-    tabsItems.push(tabDiv.field_tile_tab_title?.value)
+    tabsItems.push(tabDiv.field_tile_tab_title?.value?(tabDiv.field_tile_tab_title.value):(""))
     const tileImages = tabDiv.relationships.field_tile_images_ || []
     let tabsPanelsItem = ``
     tileImages.map((imgDiv, idx: Number) => { 
@@ -79,11 +79,11 @@ export const TabsImageTilesParagraph = ({ node }) => {
 
   // const titleId = slugify(${node.field_tabs_tile_paragraph_title.value})
   const paragraphTitle = node.field_tabs_tile_paragraph_title.value
-  const tabs = tabsItems.map((tabItem) => {
+  const tabs = tabsItems!=null?( tabsItems.map((tabItem) => {
     return( 
     <Tab><a dangerouslySetInnerHTML={{ __html:tabItem}} /></Tab> 
     )
-  }) 
+   })):("")
   const panels = tabPanelsArray.map((panelItem) => {
     return(    
       <div className='content-carousel__slide'>

@@ -145,13 +145,13 @@ export const query = graphql`
     }  
     sideBarForm: blockContentMailchimpOptInForm(
       field_site_for_block: {drupal_internal__target_id: {eq: $park}}
-      field_form_type: {eq: "Sidebar"}
+      field_form_type: {eq: "sidebar"}
     ) {
       ...MailChimpOptInFormBlockQuery
     }
     bottomForm: blockContentMailchimpOptInForm(
       field_site_for_block: {drupal_internal__target_id: {eq: $park}}
-      field_form_type: {eq: "Bottom"}
+      field_form_type: {eq: "bottom"}
     ) {
       ...MailChimpOptInFormBlockQuery
     }

@@ -49,9 +49,9 @@ export default function SiteLogoBlock() {
   `)
   const result = data.allBlockContentSiteLogoPanel.nodes.map((item, index: Number) => {  
     if(item.field_site_for_block.drupal_internal__target_id === `${park}`) {
-      const bgImgSrc = apiDomain + item.relationships.field_site_logo.relationships.field_media_image_1.uri.url
-      const bgImgAlt = item.body.value
-      const siteLogoClass = item.field_site_logo_class
+      const bgImgSrc = item.relationships?.field_site_logo?.relationships?.field_media_image_1?.uri?.url?(apiDomain + item.relationships.field_site_logo.relationships.field_media_image_1.uri.url):("")
+      const bgImgAlt = item.body?.value?(item.body.value):("")
+      const siteLogoClass = item.field_site_logo_class?(item.field_site_logo_class):("")
       return (
         <a
           className="masthead__logo-anchor hide-text"
