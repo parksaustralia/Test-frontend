@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react"
-import "../css/kakadu.scss"
+import "../css/booderee.scss"
 import PageHeader from "./page-header"
 import FooterLogosPanel from "./footer-logos-panel"
 import FooterNavigationPanel from "./footer-navigation-panel"

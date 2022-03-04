@@ -1,19 +1,5 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-import { EVERY_BREAKPOINT } from 'gatsby-plugin-image/dist/src/image-utils';
-
-// const park = process.env.GATSBY_PARK; 
-// switch (park) {
-//   case "amp": require ("../../css/marine-parks.scss"); break;
-//   case "bnp": require ("../../css/booderee.scss"); break;
-//   case "cinp": require ("../../css/christmas-island.scss"); break;
-//   case "corp": require ("../../css/parks-australia.scss"); break;
-//   case "knp": require ("../../css/kakadu.scss"); break;
-//   case "ninp": require ("../../css/norfolk-island.scss"); break;
-//   case "pknp": require ("../../css/kakadu.scss"); break;
-//   case "uktnp": require ("../../css/uluru.scss"); break;
-//   default: break;
-// }
 
 export default function SiteLogoBlock() {
   const park = process.env.GATSBY_PARK; 
