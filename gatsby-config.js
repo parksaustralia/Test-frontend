@@ -1,3 +1,5 @@
+const { SocketAddress } = require("net");
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
@@ -20,10 +22,21 @@ module.exports = {
         defaultDataLayer: { platform: `gatsby`, branch: process.env.BRANCH },
       },      
     },
+    // {
+    //   resolve: `gatsby-plugin-sass`,
+    //   options: {
+    //     additionalData: `@import "./src/css/bnp.scss";`,
+    //     // additionalData: `@use 'globals' as *;`,
+    //     // additionalData: `@import "./src/css/${process.env.GATSBY_PARK}.scss";`,
+    //     // sassOptions: {
+    //     //  includePaths:[`./src/css/route/${process.env.GATSBY_PARK}`],
+    //     // }
+    //   }
+    // },
     {
       resolve: "gatsby-plugin-layout",
       options: {
-        component: require.resolve(`./src/components/layout.tsx`),
+        component: require.resolve(`./src/components/layout-${process.env.GATSBY_PARK}.tsx`),
       },
     },
     "gatsby-plugin-image",
