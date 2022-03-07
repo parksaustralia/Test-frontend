@@ -14,7 +14,7 @@ class FooterNavigationPanel extends Component {
               <div className="grid-col grid-col--12">
                 <div className="footer__nav-wrapper clearfix">   
                   <FooterMenu />
-                  <FooterNavListBlock />
+                  <FooterNavListBlock park={park}/>
                 </div>
               </div>
             </div>
