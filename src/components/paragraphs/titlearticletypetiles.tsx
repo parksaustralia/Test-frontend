@@ -5,6 +5,8 @@ import ArticlesList  from "../articleslist"
 
 export const TitleArticleTypeTilesParagraph = ({ node }) => {
   const paragraphTitle = node.field_article_type_tiles_title.value
+  const siteCode = node.field_site_of_article.value
+  const typeOfArticle = node.field_select_article_type
   const articlesView = <ArticlesList node={node} />
   return(
    <section className="pb-medium"> 
@@ -36,6 +38,7 @@ export const TitleArticleTypeTilesParagraph = ({ node }) => {
 
 export const fragment = graphql`
   fragment ParagraphTitlearticletypetiles on paragraph__title_article_type_tiles {
+    field_select_article_type
     field_article_type_tiles_title {
       value
     }    
