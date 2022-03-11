@@ -2,20 +2,17 @@
  * Navigation
  */
 
-.navigation {
-}
 .breakpoint-w-1080 .navigation {
   margin-left: auto;
 }
-.navigation-dropdown {
-}
+
 .navigation-dropdown__item {
   float: left;
 }
 .navigation-dropdown__anchor {
   position: relative;
   display: block;
-  padding: 2.6rem 4rem 2.5rem 2rem;
+  padding: 2.6rem 3.5rem 2.5rem 2rem;
   color: $text-color;
   text-decoration: none;
   transition: background-color 150ms ease-in-out,
@@ -120,6 +117,7 @@
   font-weight: 700;
 }
 .navigation-dropdown__panel-list-item a {
+  font-size: 1.5rem;
   color: $text-color-light;
   text-decoration: none;
 }

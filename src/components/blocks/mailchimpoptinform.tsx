@@ -8,8 +8,8 @@ export const MailChimpOptInFormBlock = ({ node }) => {
     const apiDomain = process.env.GATSBY_API_DOMAIN
     const formType = node?.field_form_type?(node.field_form_type):("")
     const formId = formType + "-form"
-    const formCheckBox = formType + "-checkbox"
-    const formConsenttId = formType + "-consentt"
+    const formCheckBoxId = formType + "-checkbox"
+    const formConsentId = formType + "-consent"
     const mailchimpForm = node?.relationships?.field_mailchimp_form_paragraph?(node.relationships.field_mailchimp_form_paragraph):([])
     const formTitle = mailchimpForm?.field_form_title?(mailchimpForm.field_form_title):("")
     const formText = mailchimpForm?.field_form_text?.value?(mailchimpForm.field_form_text.value):("")
@@ -25,12 +25,26 @@ export const MailChimpOptInFormBlock = ({ node }) => {
     const photo4Src = mailchimpForm?.relationships?.field_photo_4?.relationships?.field_media_image?.uri?.url?(apiDomain + mailchimpForm.relationships.field_photo_4.relationships.field_media_image.uri.url):("") 
     const photo4Alt = mailchimpForm?.relationships?.field_photo_4?.name?(apiDomain + mailchimpForm.relationships.field_photo_4.name):("")
     const currentPage = '' //typeof window !== 'undefined' ?  window.location.href: ''
+    const [state, setState] = React.useState<{selections:string[]}>({selections:[]})
+    const handleCheck = (key) => {
+      let sel = state.selections
+      let find = sel.indexOf(key)
+      if(find > -1) {
+        sel.splice(find, 1)
+      } else {
+        sel.push(key)
+      }
+      setState({
+        selections:sel,
+      })
+    }
     const subscribeButtonClick = (e) => {
-      // var formCheckBoxElement = document.getElementById(formCheckBox.toString())
-      // var formConsenttElement = document.getElementById(formConsenttId.toString())
-      // if(formCheckBoxElement?.checked? == false) {
-      //       [0].classList.add('consent--alert');
-      // }
+      var formConsenttElement = document.getElementById(formConsentId.toString())
+      var currentId  = formCheckBoxId.toString()
+      if(!state.selections.toString().includes(currentId)) {
+        e.preventDefault();
+        formConsenttElement?.classList.add('consent--alert');
+      }
     }
     
     return(            
@@ -78,12 +92,14 @@ export const MailChimpOptInFormBlock = ({ node }) => {
                         {buttonText}
                       </button>
                       <hr/>
-                      <div className="consent" id={formConsenttId}>
-                        <input className="consent__checkbox"
-                              name="CONSENT"
-                              id={formCheckBox}
-                              type="checkbox" 
-                              checked={false}/>
+                      <div className="consent" id={formConsentId}>
+                        <input type='checkbox'
+                          id={formCheckBoxId.toString()}
+                          className='consent__checkbox'
+                          name='CONSENT'
+                          onChange={()=>handleCheck(formCheckBoxId.toString())}
+                          checked={state.selections.includes(formCheckBoxId.toString())}
+                        />
                         <label className="consent__label">
                           I have read the <a href="/privacy/" target="_blank" data-proofer-ignore>Privacy Notice</a> and consent to my personal information being used and disclosed in accordance with that notice.
                         </label>
@@ -127,14 +143,17 @@ export const MailChimpOptInFormBlock = ({ node }) => {
                   <div className="hidden-key" aria-hidden="true">
                   <input type="text" name={botKey} value="" />
                   </div>
-                  <button className="button button--small subscribe-block__button" type="submit">
+                  <button className="button button--small subscribe-block__button" type="submit" onClick={subscribeButtonClick}>
                     {buttonText}
                   </button>
-                  <div className="consent" id={formConsenttId}>
-                    <input className="consent__checkbox"
-                          name="CONSENT"
-                          id={formCheckBox}
-                          type="checkbox" />
+                  <div className="consent" id={formConsentId}>
+                    <input type='checkbox'
+                          id={formCheckBoxId.toString()}
+                          className='consent__checkbox'
+                          name='CONSENT'
+                          onChange={()=>handleCheck(formCheckBoxId.toString())}
+                          checked={state.selections.includes(formCheckBoxId.toString())}
+                        />
                     <label className="consent__label">
                       I have read the <a href="/privacy/" target="_blank" data-proofer-ignore>Privacy Notice</a> and consent to my personal information being used and disclosed in accordance with that notice.
                     </label>

@@ -209,11 +209,14 @@
 }
 .footer__social-link {
   float: left;
-  padding-right: 0.4rem;
+  padding-right: 0.9rem;
   padding-bottom: 2.5rem;
 }
 .footer__social-link:nth-child(5) {
   clear: left;
+}
+ul.footer__social-links {
+  padding-left: 0.2rem;
 }
 .breakpoint-tablet-wide .footer__social-link,
 .breakpoint-tablet .footer__social-link,

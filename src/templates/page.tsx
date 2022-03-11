@@ -121,6 +121,7 @@ export const query = graphql`
           type: __typename
           ...ParagraphFigure
           ...ParagraphButtons
+          ...ParagraphEmbedvideo
           ...ParagrapTabsimagetiles
           ...ParagraphTitlearticletypetiles
           ...ParagraphEmbedmap

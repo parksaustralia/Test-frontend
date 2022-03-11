@@ -35,6 +35,48 @@ export default function ArticleTemplate({ data }) {
     const videoTitle = data.nodeArticle.relationships?.field_embed_video?.field_video_title?.value;  
     embedVideoSection = <YoutubeEmbed embedId={videoEmbedId} videoTitle={videoTitle} />
   } 
+  const videoAndMailSection = (data?.nodeArticle?.field_article_type === "About" )?(
+    <section className="section--with-subscribe-block pb-medium">
+    <div className="grid-wrapper"> 
+      <div className="grid-row clearfix"> 
+        <div className="grid-col grid-col--8 tb-grid-col--12 ph-grid-col--12">
+          <div className="copy">
+            {data.nodeArticle.body?.value ? (
+                <div
+                  dangerouslySetInnerHTML={{ __html: data.nodeArticle.body.value }}
+                />
+              ) : (
+                <></>
+              )}
+            {embedVideoSection} 
+          </div>
+        </div> 
+        <div className="grid-col grid-col--3 grid-col--push-1 tb-grid-col--12 tb-grid-col--push-0 ph-grid-col--12 ph-grid-col--push-0">
+        {mailChimpOptInSideBarForm}
+        </div>
+      </div>  
+    </div> 
+  </section>):(
+    <section className="pb-medium">
+      <div className="grid-wrapper"> 
+        <div className="grid-row clearfix"> 
+          <div className="grid-col grid-col--8 grid-col--push-2 tb-grid-col--10 tb-grid-col--push-1 ph-grid-col--12 ph-grid-col--push-0">
+            <div className="copy">
+            {data.nodeArticle.body?.value ? (
+                        <div
+                          dangerouslySetInnerHTML={{ __html: data.nodeArticle.body.value }}
+                        />
+                      ) : (
+                        <></>
+                      )}
+              {embedVideoSection} 
+            </div>
+          </div> 
+        </div>  
+      </div> 
+    </section> 
+  )
+  
   return (
     <>
     <div className="main-content" id="main-content" role="main"> 
@@ -62,27 +104,7 @@ export default function ArticleTemplate({ data }) {
         </div> 
       </section> 
       {heroImageSection}
-      <section className="section--with-subscribe-block pb-medium">
-        <div className="grid-wrapper"> 
-          <div className="grid-row clearfix"> 
-            <div className="grid-col grid-col--8 tb-grid-col--12 ph-grid-col--12">
-              <div className="copy">
-                {data.nodeArticle.body?.value ? (
-                    <div
-                      dangerouslySetInnerHTML={{ __html: data.nodeArticle.body.value }}
-                    />
-                  ) : (
-                    <></>
-                  )}
-                {embedVideoSection} 
-              </div>
-            </div> 
-            <div className="grid-col grid-col--3 grid-col--push-1 tb-grid-col--12 tb-grid-col--push-0 ph-grid-col--12 ph-grid-col--push-0">
-             {mailChimpOptInSideBarForm}
-            </div>
-          </div>  
-        </div> 
-      </section> 
+      {videoAndMailSection}
       {mailChimpOptInBottomForm}
     </div>
         </>
@@ -101,7 +123,8 @@ export const query = graphql`
         alias
         pid
         langcode
-      }	      
+      }	 
+      field_article_type     
       relationships {
         field_hero_image {
           ...on media__hero_image {

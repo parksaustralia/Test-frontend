@@ -143,9 +143,15 @@ const buildMenu = menuArray => {
         }
       }     
     } else {
+      let linkHref 
+      if(menuArray[item]?.link?.uri_alias !=null) {
+        linkHref = menuArray[item].link.uri_alias.replace($park, '')
+      } else {
+        linkHref = menuArray[item]?.link.uri?.replace("internal:" + $park, '')
+      }
       menu.push(
         <li className="navigation-dropdown__item">
-          <a href={menuArray[item].link?.uri_alias?.replace($park, '')}
+          <a href={linkHref}
               className="navigation-dropdown__anchor navigation-dropdown__anchor--top-level"
               id={`nav-${menuArray[item].title.toLowerCase().replace(' ', '-')}`}
               >

@@ -28,11 +28,10 @@
   user-select: none;
   font-size: 1.1rem;
   text-align: left;
-
-  background: image-url("consent-checkbox/checkbox-unchecked.png") no-repeat,
-    image-url("consent-checkbox/checkbox-checked.png") no-repeat;
+  background-image: url("./consent-checkbox/checkbox-unchecked.png"), url("./consent-checkbox/checkbox-checked.png");
+  background-repeat: no-repeat;
 }
-
 .consent__checkbox:checked + .consent__label {
-  background: image-url("consent-checkbox/checkbox-checked.png") no-repeat;
+  background-image: url("./consent-checkbox/checkbox-checked.png");
+  background-repeat: no-repeat;
 }
