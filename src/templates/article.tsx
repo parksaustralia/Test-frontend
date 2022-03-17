@@ -85,13 +85,13 @@ export default function ArticleTemplate({ data }) {
           <div className="grid-row clearfix"> 
             <div className="grid-col grid-col--12"> 
               <div className="page-header"> 
-                <ul className="page-header__breadcrumbs clearfix"> 
+                {/* <ul className="page-header__breadcrumbs clearfix"> 
                   <li className="page-header__breadcrumb"> <a href="/news/"> News </a> </li> 
                   <li className="page-header__breadcrumb"> 
                     <a href={data.nodeArticle.path.alias} 
                       dangerouslySetInnerHTML={{ __html:data.nodeArticle.field_article_title.value} } />              
                   </li> 
-                </ul>             
+                </ul>              */}
                 <div className="page-header__heading-wrapper clearfix">
                   <h1 className="page-header__heading" dangerouslySetInnerHTML={{ __html: data.nodeArticle.field_article_title.value }} />
                   <ul className="page-header__social-icons">
