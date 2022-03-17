@@ -16,14 +16,14 @@ function MapEmbed(props) {
   let data;
     data = useStaticQuery(graphql`
       query {
-        informations: allNodeInformation( 
-          filter: {
-            field_site: {drupal_internal__target_id: {eq: "uktnp"}}
-          }) 
-        {
+        informations: allNodeInformation {
           nodes {
             field_information_title {
               value
+            }
+            field_information_category
+            field_site {
+              drupal_internal__target_id
             }
             field_information_description {
               value
@@ -52,13 +52,15 @@ function MapEmbed(props) {
     `)
     const informationsArray = data.informations || []
     informationsArray.nodes.forEach((item) => {
-      const infoTitle = item.field_information_title.value.replace("'", "&apos;").trim()
-      const infoImgSrc = apiDomain + item.relationships.field_tile_image.relationships.field_media_image.uri.url
-      const infoDesc = item.field_information_description.value.replace("'", "&apos;").trim()
-      const infoLat = item.field_info_latitude_number
-      const infoLon = item.field_info_longitude_number
-      const infoAlias = item.path?.alias?.replace(`/${park}`, "")
-      lists += `{ 'title': '${infoTitle}', 'imgsrc': '${infoImgSrc}', 'description': '${infoDesc}', 'latitude': '${infoLat}','longitude': '${infoLon}', 'pathalias': '${infoAlias}' }, `
+      if(item.field_information_category === "map" && item.field_site.drupal_internal__target_id === park) {
+        const infoTitle = item.field_information_title.value.replace("'", "&apos;").trim()
+        const infoImgSrc = apiDomain + item.relationships.field_tile_image.relationships.field_media_image.uri.url
+        const infoDesc = item.field_information_description.value.replace("'", "&apos;").trim()
+        const infoLat = item.field_info_latitude_number
+        const infoLon = item.field_info_longitude_number
+        const infoAlias = item.path?.alias?.replace(`/${park}`, "")
+        lists += `{ 'title': '${infoTitle}', 'imgsrc': '${infoImgSrc}', 'description': '${infoDesc}', 'latitude': '${infoLat}','longitude': '${infoLon}', 'pathalias': '${infoAlias}' }, `
+      }
     })
 
     mapLists = `[${lists}]` 

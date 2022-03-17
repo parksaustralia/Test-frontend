@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { graphql } from "gatsby"
+import { useStaticQuery,graphql } from "gatsby"
 import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
 import MapEmbed from "../map/MapEmbed"
+// import CategorisePagesList from "../categorisepagelist"
 
 export const TabsImageTilesParagraph = ({ node }) => {
   const apiDomain = process.env.GATSBY_API_DOMAIN;
+  const park = process.env.GATSBY_PARK;
   const tilesTabs = node.relationships.field_image_tiles_tabs || []
   let tabsItems: string[] = [];
   let tabPanelsArray : string[] = [];
@@ -54,31 +56,89 @@ export const TabsImageTilesParagraph = ({ node }) => {
     )
   }
   tilesTabs.map((tabDiv, index: Number) => {
-    tabsItems.push(tabDiv.field_tile_tab_title?.value?(tabDiv.field_tile_tab_title.value):(""))
-    const tileImages = tabDiv.relationships.field_tile_images_ || []
+    tabsItems.push(tabDiv.field_tile_tab_title?.value?(tabDiv?.field_tile_tab_title?.value):(""))
     let tabsPanelsItem = ``
-    tileImages.map((imgDiv, idx: Number) => { 
-      const image = apiDomain + imgDiv.relationships.field_media_image?.uri?.url;
-      const imageTileTitle = imgDiv.field_tile_image_title?.value;
-      const aClass = imgDiv.field_tile_image_class;
-      const aLink = imgDiv.field_tile_link_url;
-      const vKey = `alink`+idx;
-      tabsPanelsItem +=`
-        <a key=${vKey} class=${aClass} href=${aLink}> 
-          <div class="tile__shim"> 
-            <div class="tile__image-wrapper"> 
-              <img class="tile__image" src=${image} /> 
+    const tileCategory = tabDiv?.field_tile_category?(tabDiv?.field_tile_category):(null)
+    if(tileCategory != null) {     
+      const data = useStaticQuery(graphql`
+      query {
+        allNodeInformation {
+          nodes {
+            field_site{
+              drupal_internal__target_id
+            }
+            field_information_category
+            field_information_title {
+              value
+            }
+            path {
+              alias
+            }
+            relationships {
+              field_tile_image {
+                ... on media__tile_image {
+                  relationships {
+                    field_media_image {
+                      uri {
+                        url
+                      }
+                    }
+                  }
+                }
+              }   
+            }   
+          }
+        }
+      }`)
+      const categorisePageList = data?.allNodeInformation?.nodes?(data?.allNodeInformation?.nodes):([])
+      // let list  
+      let i = 0
+      categorisePageList.forEach((item) => {
+      // for (let i = 0, len = categorisePageList.length; i < len; i++) {
+        //list = categorisePageList[i]
+        if(item?.field_site?.drupal_internal__target_id === park && item?.field_information_category === tileCategory) {
+          const imgSrc = item.relationships?.field_tile_image?.relationships?.field_media_image?.uri?.url?(apiDomain + item.relationships.field_tile_image.relationships.field_media_image.uri.url):""
+          const link = item?.path?.alias?(item?.path?.alias.replace(`/${park}`, "")):("");
+          const tileTitle = item?.field_information_title?.value?(item?.field_information_title?.value):("")
+          const key = `alink`+i;
+          tabsPanelsItem +=`
+            <a key=${key} class="tile" href=${link}> 
+              <div class="tile__shim"> 
+                <div class="tile__image-wrapper"> 
+                  <img class="tile__image" src=${imgSrc} /> 
+                </div> 
+              </div> 
+              <div class="tile__title">${tileTitle} </div> 
+            </a>
+          `
+          i++
+        }
+      } )    
+    } else {
+      const tileImages = tabDiv.relationships.field_tile_images_ || []
+      tileImages.map((imgDiv, idx: Number) => { 
+        const image = apiDomain + imgDiv.relationships.field_media_image?.uri?.url;
+        const imageTileTitle = imgDiv.field_tile_image_title?.value;
+        const aClass = imgDiv.field_tile_image_class;
+        const aLink = imgDiv.field_tile_link_url;
+        const vKey = `blink`+idx;
+        tabsPanelsItem +=`
+          <a key=${vKey} class=${aClass} href=${aLink}> 
+            <div class="tile__shim"> 
+              <div class="tile__image-wrapper"> 
+                <img class="tile__image" src=${image} /> 
+              </div> 
             </div> 
-          </div> 
-          <div class="tile__title">${imageTileTitle} </div> 
-        </a>
-      `
-    });
+            <div class="tile__title">${imageTileTitle} </div> 
+          </a>
+        `
+      }) 
+    } 
     tabPanelsArray.push(tabsPanelsItem)
   });
 
   // const titleId = slugify(${node.field_tabs_tile_paragraph_title.value})
-  const paragraphTitle = node.field_tabs_tile_paragraph_title.value
+  const paragraphTitle = node?.field_tabs_tile_paragraph_title?.value?(node?.field_tabs_tile_paragraph_title?.value):("")
   const tabs = tabsItems!=null?( tabsItems.map((tabItem) => {
     return( 
     <Tab><a dangerouslySetInnerHTML={{ __html:tabItem}} /></Tab> 
@@ -132,6 +192,7 @@ fragment ParagrapTabsimagetiles on paragraph__title_tab_image_tiles {
   }
   relationships {
    field_image_tiles_tabs {
+    field_tile_category
     field_tile_tab_title {
       value
     }
